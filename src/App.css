@@ -62,3 +62,6 @@
 .language-switcher button:hover img {
   transform: scale(1.1);
 }
+.logo:hover img {
+  transform: scale(1.9);
+}
