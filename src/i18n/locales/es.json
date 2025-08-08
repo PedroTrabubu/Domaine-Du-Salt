@@ -1,5 +1,17 @@
 {
   "mainTitle": "Bienvenido a Domaine du Sault",
   "welcome": "Tu estancia de ensueño comienza aquí",
-  "tittle": "Descubre el encanto de nuestra casa rural en Auvernia, donde el confort y la naturaleza se encuentran."
+  "tittle": "Descubre el encanto de nuestras casas rurales en Auvernia, donde el confort y la naturaleza se encuentran.",
+  "nav": {
+    "home": "Inicio",
+    "lodging": "Las habitaciones",
+    "prices": "Precios",
+    "contact": "Contacto"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch"
+  }
 }

@@ -66,26 +66,45 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* ---------------- NAVBAR STYLES ---------------- */
+
 .navbar {
-  position: fixed;         /* Fija la barra arriba */
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Espacio entre elementos */
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.2 0rem;
   background-color: #fafafa;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 25%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   z-index: 1000;
 }
 
+.logo img {
+  height: 150px;               /* 🔼 Más grande */
+  width: auto;
+  /* transform: scale(1.05);*/     /* 🔼 Estilo inicial como "hover" */
+  transition: transform 0.3s ease;
+  margin-left: 4rem; /* ✅ Espacio a la izquierda */
+}
+
+.logo img:hover {
+  transform: scale(0.1);      /* 🔼 Hover ligeramente más grande */
+}
 .navbar ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 4rem;
   margin: 0;
   padding: 0;
+  flex: 1;
 }
 
 .navbar li a {
@@ -97,4 +116,30 @@ button:focus-visible {
 
 .navbar li a:hover {
   color: #0077cc;
+}
+
+/* ----------- LANGUAGE SWITCHER ----------- */
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem; /* ✅ Espacio a la derecha del último botón */
+}
+
+.language-switcher button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-switcher img {
+  width: 32px;
+  height: 20px;
+  object-fit: cover;         /* ✅ Elimina espacios blancos internos */
+  display: block;            /* ✅ Elimina espacios extra de inline */
+  border-radius: 3px;
 }

@@ -1,5 +1,17 @@
 {
   "mainTitle": "Willkommen im Domaine du Sault",
-  "welcome": "Ihr Traumurlaub beginnt hier",
-  "tittle": "Entdecken Sie den Charme unseres Gästehauses in der Auvergne, wo Komfort und Natur sich begegnen."
+  "welcome": "Ihr Traumaufenthalt beginnt hier",
+  "tittle": "Entdecken Sie den Charme unserer Gästezimmer in der Auvergne, wo Komfort und Natur sich begegnen.",
+  "nav": {
+    "home": "Startseite",
+    "lodging": "Zimmer",
+    "prices": "Preise",
+    "contact": "Kontakt"
+  },
+    "languages": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch"
+  }
 }

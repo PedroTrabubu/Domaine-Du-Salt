@@ -1,5 +1,17 @@
 {
   "mainTitle": "Welcome to Domaine du Sault",
-  "welcome": "Your dream getaway begins here",
-  "tittle": "Discover the charm of our guesthouse in Auvergne, where comfort meets nature."
+  "welcome": "Your dream stay begins here",
+  "tittle": "Discover the charm of our guest rooms in Auvergne, where comfort meets nature.",
+  "nav": {
+    "home": "Home",
+    "lodging": "Rooms",
+    "prices": "Rates",
+    "contact": "Contact"
+  },
+    "languages": {
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch"
+  }
 }

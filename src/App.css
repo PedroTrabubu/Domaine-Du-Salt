@@ -43,7 +43,8 @@
 .language-switcher {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-left: auto;
 }
 
 .language-switcher button {

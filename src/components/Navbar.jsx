@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const flags = {
@@ -10,19 +10,44 @@ const flags = {
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem('i18nextLng', lng);
+    setMenuOpen(false); // cierra menú al cambiar idioma (opcional)
   };
 
   return (
     <nav className="navbar">
-      <ul className="nav-links">
-        <li><a href="#home">{t('Bienvenue')}</a></li>
-        <li><a href="#lodging">{t('Les chambres')}</a></li>
-        <li><a href="#activities">{t('Tarifs')}</a></li>
-        <li><a href="#contact">{t('Contact')}</a></li>
+      <div className="logo">
+        <a href="#home">
+          <img
+            src="/logo/logo-domaine-de-salt.svg"
+            alt="Logo Domaine du Salt"
+            height="40"
+          />
+        </a>
+      </div>
+
+      {/* Botón hamburguesa móvil */}
+      <button
+        className="hamburger"
+        aria-label="Toggle menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {/* Tres barras para el icono */}
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </button>
+
+      {/* Menú, clase "open" visible en móvil si menuOpen=true */}
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li><a href="#home" onClick={() => setMenuOpen(false)}>{t('nav.home')}</a></li>
+        <li><a href="#lodging" onClick={() => setMenuOpen(false)}>{t('nav.lodging')}</a></li>
+        <li><a href="#activities" onClick={() => setMenuOpen(false)}>{t('nav.prices')}</a></li>
+        <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t('nav.contact')}</a></li>
       </ul>
 
       <div className="language-switcher">
@@ -31,6 +56,7 @@ const Navbar = () => {
             key={lng}
             onClick={() => changeLanguage(lng)}
             className={i18n.language === lng ? 'active-lang' : ''}
+            title={t(`languages.${lng}`)}
           >
             <img src={src} alt={lng} width="32" height="20" />
           </button>
