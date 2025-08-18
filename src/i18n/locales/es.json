@@ -13,5 +13,19 @@
     "en": "English",
     "es": "Español",
     "de": "Deutsch"
-  }
+  },
+  "home.checkAvailability": "Compruebe disponibilidad",
+  "home.selectDate": "dd/mm/aaaa",
+  "home.checkIn": "Elija su fecha de entrada",
+  "home.checkOut": "Elija su fecha de salida",
+  "home.rooms": "Habitaciones",
+  "home.adults": "Adultos",
+  "home.children": "Niños",
+  "home.search": "Buscar",
+  "home.promoCode": "Código promocional",
+
+  "nights_one": "1 noche",
+  "nights_other": "{{count}} noches",
+  "home.checkInLabel": "Entrada",
+  "home.checkOutLabel": "Salida"
 }

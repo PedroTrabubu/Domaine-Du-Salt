@@ -1,17 +1,32 @@
 {
   "mainTitle": "Willkommen im Domaine du Sault",
   "welcome": "Ihr Traumaufenthalt beginnt hier",
-  "tittle": "Entdecken Sie den Charme unserer Gästezimmer in der Auvergne, wo Komfort und Natur sich begegnen.",
+  "tittle": "Entdecken Sie den Charme unserer Landhäuser in der Auvergne, wo Komfort und Natur sich begegnen.",
   "nav": {
     "home": "Startseite",
     "lodging": "Zimmer",
     "prices": "Preise",
     "contact": "Kontakt"
   },
-    "languages": {
+  "languages": {
     "fr": "Français",
     "en": "English",
     "es": "Español",
     "de": "Deutsch"
-  }
+  },
+  "home.checkAvailability": "Verfügbarkeit prüfen",
+  "home.selectDate": "TT/MM/JJJJ",
+  "home.rooms": "Zimmer",
+  "home.adults": "Erwachsene",
+  "home.children": "Kinder",
+  "home.search": "Suchen",
+  "home.promoCode": "Aktionscode",
+
+  "nights_one": "1 Nacht",
+  "nights_other": "{{count}} Nächte",
+
+  "home.checkInLabel": "Anreise",
+  "home.checkOutLabel": "Abreise",
+  "home.checkIn": "Wählen Sie Ihr Anreisedatum",
+  "home.checkOut": "Wählen Sie Ihr Abreisedatum"
 }

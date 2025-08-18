@@ -8,12 +8,25 @@
     "prices": "Tarifs",
     "contact": "Contact"
   },
-  
+
   "languages": {
     "fr": "Français",
     "en": "English",
     "es": "Español",
     "de": "Deutsch"
-  }
+  },
+  "home.checkAvailability": "Vérifiez la disponibilité",
+  "home.selectDate": "jj/mm/aaaa",
+  "home.checkIn": "Choisissez votre date d'arrivée",
+  "home.checkOut": "Choisissez votre date de départ",
+  "home.rooms": "Chambres",
+  "home.adults": "Adultes",
+  "home.children": "Enfants",
+  "home.search": "Rechercher",
+  "home.promoCode": "Code promotionnel",
 
+  "nights_one": "1 nuit",
+  "nights_other": "{{count}} nuits",
+  "home.checkInLabel": "Arrivée",
+  "home.checkOutLabel": "Départ"
 }
