@@ -1,123 +1,96 @@
-/* BookingForm.css */
-
-/* Contenedor principal del formulario */
+/* Contenedor principal */
 .booking-form {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1.5rem;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Argesta', sans-serif;
+  position: relative;
 }
 
-/* Barra principal de reservas */
-.booking-bar-label {
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  display: flex;
-  justify-content: space-between; /* fechas a la izquierda, summary a la derecha */
-  align-items: center;
-  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
-  padding: 1rem 1.5rem;
-  border-radius: 40px;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  transition: background 0.3s;
-}
-
-/* Efecto hover en la barra completa */
-.booking-bar:hover {
-  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
-}
-
-/* Zona de fechas (clicable para abrir calendario) */
-.checkin-checkout {
-  cursor: pointer; 
-  display: flex;
-  gap: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Entrada / Salida más grandes y destacadas */
-.booking-bar-label span {
-  font-size: 1.25rem; /* aumentar tamaño */
-  font-weight: 700;   /* más fuerte */
-}
-
-.booking-bar-label span::before {
-  font-weight: 800;   /* palabra "Entrada" / "Salida" más destacada */
-  font-size: 1.3rem;
-}
-
-/* Resumen a la derecha (no clicable) */
-.summary {
-  display: flex;
-  gap: 0.6rem; /* separación entre items */
-  align-items: center;
-}
-
-/* Cada elemento del summary */
-.summary span {
-  background: rgba(255, 255, 255, 0.2); /* sutil transparencia */
-  padding: 0.3rem 0.6rem;
-  border-radius: 12px;
-  color: #050505;
-  font-weight: 500;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-/* Separador opcional entre items */
-.summary span + span::before {
-  content: "|";
-  color: rgba(7, 218, 255, 0.5);
-  margin: 0 0.5rem; /* margen entre el separador y el texto */
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Controles adicionales debajo del calendario */
+/* Controles en fila */
 .booking-controls {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
-  margin-top: 1rem;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  overflow-x: auto;
 }
 
-.booking-bar {
-  font-weight: 700;   /* más fuerte */
-  text-transform: uppercase; /* ENTRADA / SALIDA en mayúsculas */
-  cursor: pointer;    /* manita al pasar */
-  margin-right: 4px;
+/* Cada campo */
+.booking-controls label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  min-width: 120px;
 }
 
 .booking-controls select,
 .booking-controls input {
-  padding: 0.5rem 0.8rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
   margin-top: 0.3rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background: #fafafa;
+  transition: border 0.2s;
+}
+
+.booking-controls select:focus,
+.booking-controls input:focus {
+  border-color: #000;
+  outline: none;
+  background: #fff;
 }
 
 /* Botón de búsqueda */
 .booking-search-btn {
-  background: #2193b0;
-  color: #fff;
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 20px;
-  font-weight: 600;
+  align-self: stretch;
+  padding: 1.3rem 1.3rem;
+  font-weight: 700;
+  border: 2px solid #000;
+  background: #fff;
   cursor: pointer;
-  transition: background 0.3s;
+  border-radius: 10px;
+  font-family: 'Argesta', serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 .booking-search-btn:hover {
-  background: #6dd5ed;
+  background: #000;
+  color: #fff;
+  transform: scale(1);
 }
 
-/* Tooltip para noches */
+/* Calendario overlay */
+.calendar-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  z-index: 50;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  padding: 1rem;
+}
+.books.check-in,
+.books.check-out {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+cursor: pointer
+}
+
+/* Tooltip noches */
 .day-with-tooltip {
   position: relative;
 }
@@ -125,7 +98,7 @@
 .day-with-tooltip:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  top: -30px;
+  top: -28px;
   left: 50%;
   transform: translateX(-50%);
   background: #2193b0;
@@ -135,5 +108,15 @@
   font-size: 0.75rem;
   white-space: nowrap;
   pointer-events: none;
-  z-index: 10;
+}
+
+/* 📱 Responsive: en móvil se apila */
+@media (max-width: 768px) {
+  .booking-controls {
+    flex-wrap: wrap;
+  }
+  .booking-search-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }

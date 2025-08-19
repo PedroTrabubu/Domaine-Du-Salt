@@ -3,9 +3,10 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './BookingForm.css';
 import { useTranslation } from 'react-i18next';
+import { es, fr, enGB, de } from "date-fns/locale";
 
 const BookingForm = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const [hoveredDate, setHoveredDate] = useState(null);
@@ -17,7 +18,10 @@ const BookingForm = () => {
 
   const formRef = useRef();
 
-  // --- Cerrar calendario al hacer clic fuera ---
+  const localesMap = { es, fr, en: enGB, de };
+  const currentLang = i18n.language.split('-')[0];
+  const currentLocale = localesMap[currentLang] || enGB;
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (formRef.current && !formRef.current.contains(event.target)) {
@@ -25,13 +29,13 @@ const BookingForm = () => {
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const handleSearch = () => {
-    alert(`Buscando: ${startDate?.toLocaleDateString()} - ${endDate?.toLocaleDateString()}, ${rooms} habitaciones, ${adults} adultos, ${children} niños, código: ${promoCode}`);
+    alert(
+      `Buscando: ${startDate?.toLocaleDateString()} - ${endDate?.toLocaleDateString()}, ${rooms} habitaciones, ${adults} adultos, ${children} niños, código: ${promoCode}`
+    );
   };
 
   const isDateAvailable = (date) => {
@@ -39,7 +43,6 @@ const BookingForm = () => {
     const yesterday = new Date(today);
     yesterday.setDate(today.getDate() - 1);
     if (date < yesterday) return false;
-
     const unavailableDates = [new Date(2025, 7, 21), new Date(2025, 7, 22)];
     return !unavailableDates.some((d) => d.toDateString() === date.toDateString());
   };
@@ -52,59 +55,38 @@ const BookingForm = () => {
 
   return (
     <div className="booking-form" ref={formRef}>
-      {/* Barra azul con Entrada / Salida */}
-      <div className="booking-bar-label" onClick={() => setShowCalendar(true)}>
-        <span>
-          {t('home.checkInLabel')}: {startDate ? startDate.toLocaleDateString() : t('home.checkIn')}
-        </span>
-        {' | '}
-        <span>
-          {t('home.checkOutLabel')}: {endDate ? endDate.toLocaleDateString() : t('home.checkOut')}
-        </span>
-      </div>
-
-      {/* Resumen de habitaciones, adultos y niños */}
-      <div className="summary">
-        <span>{rooms} {t('home.rooms')}</span> 
-        <span>{adults} {t('home.adults')}</span> 
-        <span>{children} {t('home.children')}</span>
-      </div>
-
-      {/* Calendario */}
-      {showCalendar && (
-        <DatePicker
-          selectsRange
-          startDate={startDate}
-          endDate={endDate}
-          onChange={(update) => {
-            setDateRange(update);
-            if (update[1]) setShowCalendar(false); 
-          }}
-          filterDate={isDateAvailable}
-          inline
-          onDayMouseEnter={(date) => setHoveredDate(date)}
-          onDayMouseLeave={() => setHoveredDate(null)}
-          renderDayContents={(day, date) => {
-            const nights =
-              startDate && !endDate && hoveredDate
-                ? calculateNights(startDate, date)
-                : 0;
-            return (
-              <div
-                className="day-with-tooltip"
-                data-tooltip={nights > 0 ? t('nights', { count: nights }) : ''}
-              >
-                {day}
-              </div>
-            );
-          }}
-        />
-      )}
-
-      {/* Controles adicionales */}
       <div className="booking-controls">
+        {/* Entrada */}
         <label>
-          {t('home.rooms')}:
+          {t('book.checkInLabel')}
+          <input
+            type="text"
+            readOnly
+            value={startDate ? startDate.toLocaleDateString(currentLang) : t('book.checkIn')}
+            onClick={() => setShowCalendar(true)}
+          />
+        </label>
+
+        {/* Salida */}
+        <label>
+          {t('book.checkOutLabel')}
+          <input
+            type="text"
+            readOnly
+            value={endDate ? endDate.toLocaleDateString(currentLang) : t('book.checkOut')}
+            onClick={() => setShowCalendar(true)}
+          />
+        </label>
+
+        {/* Noches */}
+        <label>
+          {t('book.nights')}
+          <input type="text" readOnly value={calculateNights(startDate, endDate)} />
+        </label>
+
+        {/* Habitaciones */}
+        <label>
+          {t('book.rooms')}
           <select value={rooms} onChange={(e) => setRooms(Number(e.target.value))}>
             {[...Array(5)].map((_, i) => (
               <option key={i+1} value={i+1}>{i+1}</option>
@@ -112,8 +94,9 @@ const BookingForm = () => {
           </select>
         </label>
 
+        {/* Adultos */}
         <label>
-          {t('home.adults')}:
+          {t('book.adults')}
           <select value={adults} onChange={(e) => setAdults(Number(e.target.value))}>
             {[...Array(5)].map((_, i) => (
               <option key={i+1} value={i+1}>{i+1}</option>
@@ -121,8 +104,9 @@ const BookingForm = () => {
           </select>
         </label>
 
+        {/* Niños */}
         <label>
-          {t('home.children')}:
+          {t('book.children')}
           <select value={children} onChange={(e) => setChildren(Number(e.target.value))}>
             {[...Array(5)].map((_, i) => (
               <option key={i} value={i}>{i}</option>
@@ -130,20 +114,56 @@ const BookingForm = () => {
           </select>
         </label>
 
+        {/* Código Promocional */}
         <label>
-          {t('home.promoCode')}:
+          {t('book.promoCode')}
           <input
             type="text"
             value={promoCode}
             onChange={(e) => setPromoCode(e.target.value)}
-            placeholder={t('home.promoCode')}
+            placeholder={t('book.promoCode')}
           />
         </label>
 
+        {/* Botón */}
         <button className="booking-search-btn" onClick={handleSearch}>
-          {t('home.search')}
+          {t('book.search')}
         </button>
       </div>
+
+      {/* Calendario overlay */}
+      {showCalendar && (
+        <div className="calendar-overlay">
+          <DatePicker
+            locale={currentLocale}
+            selectsRange
+            startDate={startDate}
+            endDate={endDate}
+            onChange={(update) => {
+              setDateRange(update);
+              if (update[1]) setShowCalendar(false);
+            }}
+            filterDate={isDateAvailable}
+            inline
+            onDayMouseEnter={(date) => setHoveredDate(date)}
+            onDayMouseLeave={() => setHoveredDate(null)}
+            renderDayContents={(day, date) => {
+              const nights =
+                startDate && !endDate && hoveredDate
+                  ? calculateNights(startDate, date)
+                  : 0;
+              return (
+                <div
+                  className="day-with-tooltip"
+                  data-tooltip={nights > 0 ? t('nights', { count: nights }) : ''}
+                >
+                  {day}
+                </div>
+              );
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

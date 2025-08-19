@@ -3,7 +3,7 @@
   "welcome": "Votre séjour de rêve commence ici",
   "tittle": "Découvrez le charme de nos chambres d’hôtes en Auvergne, où confort et nature se rencontrent.",
   "nav": {
-    "home": "Bienvenue",
+    "book": "Bienvenue",
     "lodging": "Les chambres",
     "prices": "Tarifs",
     "contact": "Contact"
@@ -15,18 +15,20 @@
     "es": "Español",
     "de": "Deutsch"
   },
-  "home.checkAvailability": "Vérifiez la disponibilité",
-  "home.selectDate": "jj/mm/aaaa",
-  "home.checkIn": "Choisissez votre date d'arrivée",
-  "home.checkOut": "Choisissez votre date de départ",
-  "home.rooms": "Chambres",
-  "home.adults": "Adultes",
-  "home.children": "Enfants",
-  "home.search": "Rechercher",
-  "home.promoCode": "Code promotionnel",
+  "book.selected": "Sélectionné :",
+  "book.checkAvailability": "Vérifiez la disponibilité",
+  "book.selectDate": "jj/mm/aaaa",
+  "book.checkIn": "Jour d'arrivée",
+  "book.checkOut": "Jour de départ",
+  "book.nights": "Nuits",
+  "book.rooms": "Chambres",
+  "book.adults": "Adultes",
+  "book.children": "Enfants",
+  "book.search": "Rechercher",
+  "book.promoCode": "Code promotionnel",
 
   "nights_one": "1 nuit",
   "nights_other": "{{count}} nuits",
-  "home.checkInLabel": "Arrivée",
-  "home.checkOutLabel": "Départ"
+  "book.checkInLabel": "Arrivée",
+  "book.checkOutLabel": "Départ"
 }

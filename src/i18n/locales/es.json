@@ -3,7 +3,7 @@
   "welcome": "Tu estancia de ensueño comienza aquí",
   "tittle": "Descubre el encanto de nuestras casas rurales en Auvernia, donde el confort y la naturaleza se encuentran.",
   "nav": {
-    "home": "Inicio",
+    "book": "Inicio",
     "lodging": "Las habitaciones",
     "prices": "Precios",
     "contact": "Contacto"
@@ -14,18 +14,21 @@
     "es": "Español",
     "de": "Deutsch"
   },
-  "home.checkAvailability": "Compruebe disponibilidad",
-  "home.selectDate": "dd/mm/aaaa",
-  "home.checkIn": "Elija su fecha de entrada",
-  "home.checkOut": "Elija su fecha de salida",
-  "home.rooms": "Habitaciones",
-  "home.adults": "Adultos",
-  "home.children": "Niños",
-  "home.search": "Buscar",
-  "home.promoCode": "Código promocional",
+  "book.selected": "Seleccionado:",
+  "book.checkAvailability": "Compruebe disponibilidad",
+  "book.selectDate": "dd/mm/aaaa",
+  "book.nights": "Noches",
+  "book.checkIn": "Día de llegada",
+  "book.checkOut": "Día de salida",
+
+  "book.rooms": "Habitaciones",
+  "book.adults": "Adultos",
+  "book.children": "Niños",
+  "book.search": "Buscar",
+  "book.promoCode": "Código promocional",
 
   "nights_one": "1 noche",
   "nights_other": "{{count}} noches",
-  "home.checkInLabel": "Entrada",
-  "home.checkOutLabel": "Salida"
+  "book.checkInLabel": "Entrada",
+  "book.checkOutLabel": "Salida"
 }

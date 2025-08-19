@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import './Navbar.css';
+
 
 const flags = {
   fr: '/flags/fr.svg',
@@ -21,9 +23,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <a href="#home">
+        <a href="#book">
           <img
-            src="/logo/logo-domaine-de-salt.svg"
+            src="/logo/logo domaine de salt transparente.png"
             alt="Logo Domaine du Salt"
             height="40"
           />
@@ -43,12 +45,13 @@ const Navbar = () => {
       </button>
 
       {/* Menú, clase "open" visible en móvil si menuOpen=true */}
-      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <li><a href="#home" onClick={() => setMenuOpen(false)}>{t('nav.home')}</a></li>
-        <li><a href="#lodging" onClick={() => setMenuOpen(false)}>{t('nav.lodging')}</a></li>
-        <li><a href="#activities" onClick={() => setMenuOpen(false)}>{t('nav.prices')}</a></li>
-        <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t('nav.contact')}</a></li>
-      </ul>
+<ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+  <li><a href="#book" onClick={() => setMenuOpen(false)}>{t('nav.book')}</a></li>
+  <li><a href="#lodging" onClick={() => setMenuOpen(false)}>{t('nav.lodging')}</a></li>
+  <li><a href="#activities" onClick={() => setMenuOpen(false)}>{t('nav.prices')}</a></li>
+  <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t('nav.contact')}</a></li>
+</ul>
+
 
       <div className="language-switcher">
         {Object.entries(flags).map(([lng, src]) => (
