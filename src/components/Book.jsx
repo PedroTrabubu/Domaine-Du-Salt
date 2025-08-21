@@ -3,16 +3,14 @@ import { useTranslation } from 'react-i18next';
 import BookingCalendar from './BookingClendar.jsx';
 import BookingForm from './BookingForm.jsx';
 
-const Home = () => {
+const book = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="home">
+    <section id="book">
       <BookingForm />
-      <h2>{t('h2')}</h2>
-      
     </section>
   );
 };
 
-export default Home;
+export default book;

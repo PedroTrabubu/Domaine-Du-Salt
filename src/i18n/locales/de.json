@@ -1,7 +1,7 @@
 {
   "mainTitle": "Willkommen im Domaine du Sault",
   "welcome": "Ihr Traumaufenthalt beginnt hier",
-  "tittle": "Entdecken Sie den Charme unserer Landhäuser in der Auvergne, wo Komfort und Natur sich begegnen.",
+  "tittle": "Entdecken Sie den Charme unserer Landhäuser in der Auvergne, wo Komfort und Natur aufeinandertreffen.",
   "nav": {
     "book": "Startseite",
     "lodging": "Zimmer",
@@ -18,17 +18,55 @@
   "book.checkAvailability": "Verfügbarkeit prüfen",
   "book.selectDate": "TT/MM/JJJJ",
   "book.nights": "Nächte",
+  "book.checkIn": "Anreise",
+  "book.checkOut": "Abreise",
   "book.rooms": "Zimmer",
   "book.adults": "Erwachsene",
   "book.children": "Kinder",
   "book.search": "Suchen",
-  "book.promoCode": "Aktionscode",
-
+  "book.promoCode": "Promo-Code",
   "nights_one": "1 Nacht",
   "nights_other": "{{count}} Nächte",
-
   "book.checkInLabel": "Anreise",
   "book.checkOutLabel": "Abreise",
-  "book.checkIn": "Anreisetag",
-  "book.checkOut": "Abreisetag"
+  "rooms": {
+    "title": "Entdecken Sie unsere Zimmer",
+    "button": "Jetzt buchen",
+    "gite": {
+      "name": "Gîte Valentin",
+      "description": "Ein gemütlicher Ort für die ganze Familie",
+      "features": ["Doppelbett", "WiFi", "Gartenblick"],
+      "price": "Ab 120€/Nacht"
+    },
+    "autrefois": {
+      "name": "Autrefois",
+      "description": "Rustikaler und traditioneller Charme",
+      "features": ["Eigenes Bad", "Kamin", "Ländlicher Blick"],
+      "price": "Ab 110€/Nacht"
+    },
+    "hubert": {
+      "name": "Hubert Zimmer",
+      "description": "Komfortables Doppelzimmer mit Tageslicht",
+      "features": ["Doppelbett", "Schrank", "Gemeinschaftsbad"],
+      "price": "Ab 100€/Nacht"
+    },
+    "oiseaux": {
+      "name": "Oiseaux Zimmer",
+      "description": "Ruhiges Zimmer mit Waldsicht",
+      "features": ["Einzelbett", "WiFi", "Schreibtisch"],
+      "price": "Ab 95€/Nacht"
+    },
+    "adelaide": {
+      "name": "Adelaide Zimmer",
+      "description": "Elegant und geräumig, ideal für Paare",
+      "features": ["Großes Doppelbett", "Eigenes Bad", "Balkon"],
+      "price": "Ab 130€/Nacht"
+    },
+    "salome": {
+      "name": "Salomé Zimmer",
+      "description": "Gemütliches Zimmer mit klassischer Einrichtung",
+      "features": ["Doppelbett", "WiFi", "Gartenblick"],
+      "price": "Ab 110€/Nacht"
+    }
+  }
 }

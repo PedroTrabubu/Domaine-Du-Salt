@@ -3,7 +3,7 @@
   "welcome": "Tu estancia de ensueño comienza aquí",
   "tittle": "Descubre el encanto de nuestras casas rurales en Auvernia, donde el confort y la naturaleza se encuentran.",
   "nav": {
-    "book": "Inicio",
+    "book": "Reservar",
     "lodging": "Las habitaciones",
     "prices": "Precios",
     "contact": "Contacto"
@@ -20,15 +20,67 @@
   "book.nights": "Noches",
   "book.checkIn": "Día de llegada",
   "book.checkOut": "Día de salida",
-
   "book.rooms": "Habitaciones",
   "book.adults": "Adultos",
   "book.children": "Niños",
   "book.search": "Buscar",
   "book.promoCode": "Código promocional",
-
   "nights_one": "1 noche",
   "nights_other": "{{count}} noches",
   "book.checkInLabel": "Entrada",
-  "book.checkOutLabel": "Salida"
+  "book.checkOutLabel": "Salida",
+  "book.titleh2": "Reserva tu estancia en Dore l'Eglise",
+  "rooms": {
+    "title": "Descubre nuestras habitaciones",
+    "button": "Reservar ahora",
+    "list": {
+      "gite": {
+        "name": "Gîte Valentin",
+        "description": "Disfruta de una escapada íntima para dos en Gîte Valentin, con cocina equipada y acogedor salón. Habitación en altillo, baño privado y jardín independiente para máxima tranquilidad. Una estancia confortable en plena naturaleza, perfecta para desconectar.",
+        "features": [
+          "Cama doble",
+          "Cocina equipada",
+          "Baño privado",
+          "Jardín independiente"
+        ],
+        "price": "120€/noche",
+        "image": "/photos/rooms/gite_valentin/salon.png"
+      },
+      "autrefois": {
+        "name": "Autrefois",
+        "description": "Habitación tradicional auvernesa con chimenea auténtica, suelo de piedra, entrada independiente y pequeña terraza.",
+        "features": ["Cama doble", "Vistas al jardín"],
+        "price": "100€/noche",
+        "image": "/photos/rooms/autrefois/autrefois.png"
+      },
+      "hubert": {
+        "name": "Le grenier d'Hubert",
+        "description": "Suite del dominio, bañada por el sol, con vistas al claro, área de lectura y baño grande.",
+        "features": ["Cama king", "Baño privado", "Vista al campo"],
+        "price": "110€/noche",
+        "image": "/photos/rooms/hubert/cama_hubert.png"
+      },
+      "salome": {
+        "name": "Salomé",
+        "description": "Caravana estilo años 70 y bohemia en medio de un jardín natural con terraza de madera, todo confort.",
+        "features": ["Cama doble", "Wi-Fi", "Baño privado"],
+        "price": "115€/noche",
+        "image": "/photos/rooms/salome/salome2.png"
+      },
+      "adelaide": {
+        "name": "Adélaïde",
+        "description": "Habitación con pequeño salón, chimenea y baño oculto.",
+        "features": ["Cama doble", "Salón", "Baño privado"],
+        "price": "130€/noche",
+        "image": "/photos/rooms/adelaide/adelaide_salon.avif"
+      },
+      "oiseaux": {
+        "name": "Maison d'oiseaux",
+        "description": "Pequeño refugio con vistas increíbles a los Monts du Forez, balcón para observar la naturaleza y las estrellas.",
+        "features": ["Cama doble", "Balcón", "Wi-Fi"],
+        "price": "105€/noche",
+        "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
+      }
+    }
+  }
 }

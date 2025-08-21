@@ -1,14 +1,13 @@
 {
-  "mainTitle": "Bienvenue à Domaine du Sault",
+  "mainTitle": "Bienvenue au Domaine du Sault",
   "welcome": "Votre séjour de rêve commence ici",
-  "tittle": "Découvrez le charme de nos chambres d’hôtes en Auvergne, où confort et nature se rencontrent.",
+  "tittle": "Découvrez le charme de nos maisons rurales en Auvergne, où confort et nature se rencontrent.",
   "nav": {
-    "book": "Bienvenue",
+    "book": "Réserver",
     "lodging": "Les chambres",
     "prices": "Tarifs",
     "contact": "Contact"
   },
-
   "languages": {
     "fr": "Français",
     "en": "English",
@@ -16,19 +15,71 @@
     "de": "Deutsch"
   },
   "book.selected": "Sélectionné :",
-  "book.checkAvailability": "Vérifiez la disponibilité",
+  "book.checkAvailability": "Vérifier la disponibilité",
   "book.selectDate": "jj/mm/aaaa",
+  "book.nights": "Nuits",
   "book.checkIn": "Jour d'arrivée",
   "book.checkOut": "Jour de départ",
-  "book.nights": "Nuits",
   "book.rooms": "Chambres",
   "book.adults": "Adultes",
   "book.children": "Enfants",
   "book.search": "Rechercher",
   "book.promoCode": "Code promotionnel",
-
   "nights_one": "1 nuit",
   "nights_other": "{{count}} nuits",
   "book.checkInLabel": "Arrivée",
-  "book.checkOutLabel": "Départ"
+  "book.checkOutLabel": "Départ",
+  "rooms": {
+    "title": "Découvrez nos chambres",
+    "button": "Réserver maintenant",
+    "list": {
+      "gite": {
+        "name": "Gîte Valentin",
+        "description": "Pour ceux qui souhaitent profiter du domaine comme à la maison, le Gîte Valentin offre l'intimité idéale pour un séjour à deux. Grand salon avec cuisine entièrement équipée, coin salon autour du poêle, chambre en mezzanine avec lit de 160, salle de bain et WC séparés, buanderie et jardin indépendant. Possibilité de lit bébé, linge de lit inclus. Entièrement équipé : télévision, réfrigérateur, lave-vaisselle, four, micro-ondes, vapeuruse, cafetière, bouilloire, grille-pain, lave-linge, sèche-linge, aspirateur, barbecue, mobilier de jardin, hamac, etc. Parking privé.",
+        "features": [
+          "Lit double",
+          "Cuisine équipée",
+          "Salle de bain privée",
+          "Jardin indépendant"
+        ],
+        "price": "120€/nuit",
+        "image": "/photos/rooms/gite_valentin/salon.png"
+      },
+      "autrefois": {
+        "name": "Autrefois",
+        "description": "Chambre traditionnelle auvergnate avec cheminée authentique, sol en pierre, entrée indépendante et petite terrasse.",
+        "features": ["Lit double", "Vue sur le jardin"],
+        "price": "100€/nuit",
+        "image": "/photos/rooms/autrefois/autrefois.png"
+      },
+      "hubert": {
+        "name": "Le grenier d'Hubert",
+        "description": "Suite du domaine, inondée de soleil, vue sur la clairière, espace lecture et grande salle de bain.",
+        "features": ["Lit king", "Salle de bain privée", "Vue sur la campagne"],
+        "price": "110€/nuit",
+        "image": "/photos/rooms/hubert/cama_hubert.png"
+      },
+      "salome": {
+        "name": "Salomé",
+        "description": "Caravane seventies et bohème au milieu d'un jardin naturel avec terrasse en bois, tout confort.",
+        "features": ["Lit double", "Wi-Fi", "Salle de bain privée"],
+        "price": "115€/nuit",
+        "image": "/photos/rooms/salome/salome2.png"
+      },
+      "adelaide": {
+        "name": "Adélaïde",
+        "description": "Chambre avec petit coin salon, manteau de cheminée et salle de bain dissimulée.",
+        "features": ["Lit double", "Salon", "Salle de bain privée"],
+        "price": "130€/nuit",
+        "image": "/photos/rooms/adelaide/adelaide_salon.avif"
+      },
+      "oiseaux": {
+        "name": "Maison d'oiseaux",
+        "description": "Petit cocon avec vue extraordinaire sur les Monts du Forez, balcon pour observer la nature et les étoiles.",
+        "features": ["Lit double", "Balcon", "Wi-Fi"],
+        "price": "105€/nuit",
+        "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
+      }
+    }
+  }
 }

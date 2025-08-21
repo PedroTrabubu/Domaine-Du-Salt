@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './HeroSlider.css';
 
 const images = [
+  '/photos/slider/piscina2.png',
   '/photos/piscina.jpg',
   '/photos/paisaje.jpg',
   '/photos/fuente.jpg',

@@ -7,7 +7,8 @@ import './App.css';
 // Importo los componentes que forman la página
 import Navbar from './components/Navbar';
 import HeroSlider from './components/HeroSlider'; 
-import Home from './components/Home';
+import Home from './components/Book';
+import RoomsSection from './components/RoomsSection';
 
 function App() {
   // Inicializo las traducciones (ahora puedo usar t() si lo necesito)
@@ -23,6 +24,8 @@ function App() {
 
       {/* Contenido principal de la home */}
       <Home />
+      <RoomsSection />
+
     </div>
   );
 }

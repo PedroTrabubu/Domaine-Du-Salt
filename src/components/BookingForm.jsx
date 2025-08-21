@@ -54,9 +54,10 @@ const BookingForm = () => {
   };
 
   return (
-    <div className="booking-form" ref={formRef}>
+    <div className="booking-form" id="booking-form" ref={formRef}>
+      <h2 className="screen-reader-text">{t("book.titleh2")}</h2>
       <div className="booking-controls">
-        {/* Entrada */}
+        {/* Entradas */}
         <label>
           {t('book.checkInLabel')}
           <input
@@ -66,8 +67,6 @@ const BookingForm = () => {
             onClick={() => setShowCalendar(true)}
           />
         </label>
-
-        {/* Salida */}
         <label>
           {t('book.checkOutLabel')}
           <input
