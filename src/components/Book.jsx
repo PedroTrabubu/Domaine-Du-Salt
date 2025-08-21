@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import BookingCalendar from './BookingClendar.jsx';
 import BookingForm from './BookingForm.jsx';
 
 const book = () => {
