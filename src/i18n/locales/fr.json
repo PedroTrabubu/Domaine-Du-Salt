@@ -1,12 +1,12 @@
 {
-  "mainTitle": "Bienvenue au Domaine du Sault",
+  "mainTitle": "Bienvenue au Domaine de Sault",
   "welcome": "Votre séjour de rêve commence ici",
   "tittle": "Découvrez le charme de nos maisons rurales en Auvergne, où confort et nature se rencontrent.",
   "nav": {
     "book": "Réserver",
     "lodging": "Les chambres",
-    "prices": "Tarifs",
-    "contact": "Contact"
+    "review": "Avis",
+    "location": "Localisation"
   },
   "languages": {
     "fr": "Français",
@@ -29,6 +29,7 @@
   "nights_other": "{{count}} nuits",
   "book.checkInLabel": "Arrivée",
   "book.checkOutLabel": "Départ",
+  "book.titleh2": "Réservez votre séjour au Domaine de Sault",
   "rooms": {
     "title": "Découvrez nos chambres",
     "button": "Réserver maintenant",
@@ -81,5 +82,8 @@
         "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
       }
     }
-  }
+  },
+  "location.title": "Où nous trouver",
+  "location.description": "Le Domaine de Sault est situé en pleine nature, au cœur de l'Auvergne, avec un accès facile en voiture et à quelques kilomètres de Dore-l'Église.",
+  "reviews.title": "Ce que que nos hôtes disent"
 }

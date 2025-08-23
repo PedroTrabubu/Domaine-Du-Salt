@@ -1,12 +1,12 @@
 {
-  "mainTitle": "Willkommen im Domaine du Sault",
+  "mainTitle": "Willkommen im Domaine de Sault",
   "welcome": "Ihr Traumaufenthalt beginnt hier",
   "tittle": "Entdecken Sie den Charme unserer Landhäuser in der Auvergne, wo Komfort und Natur aufeinandertreffen.",
   "nav": {
     "book": "Startseite",
     "lodging": "Zimmer",
     "prices": "Preise",
-    "contact": "Kontakt"
+    "location": "Lage"
   },
   "languages": {
     "fr": "Français",
@@ -29,6 +29,7 @@
   "nights_other": "{{count}} Nächte",
   "book.checkInLabel": "Anreise",
   "book.checkOutLabel": "Abreise",
+  "book.titleh2": "Buchen Sie Ihren Aufenthalt im Domaine de Sault",
   "rooms": {
     "title": "Entdecken Sie unsere Zimmer",
     "button": "Jetzt buchen",
@@ -68,5 +69,6 @@
       "features": ["Doppelbett", "WiFi", "Gartenblick"],
       "price": "Ab 110€/Nacht"
     }
-  }
+  },
+  "reviews.title": "Was unsere Gäste über uns sagen"
 }

@@ -48,8 +48,8 @@ const Navbar = () => {
 <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
   <li><a href="#book" onClick={() => setMenuOpen(false)}>{t('nav.book')}</a></li>
   <li><a href="#lodging" onClick={() => setMenuOpen(false)}>{t('nav.lodging')}</a></li>
-  <li><a href="#activities" onClick={() => setMenuOpen(false)}>{t('nav.prices')}</a></li>
-  <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t('nav.contact')}</a></li>
+  <li><a href="#reviews" onClick={() => setMenuOpen(false)}>{t('nav.review')}</a></li>
+  <li><a href="#location" onClick={() => setMenuOpen(false)}>{t('nav.location')}</a></li>
 </ul>
 
 

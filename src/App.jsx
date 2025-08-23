@@ -9,6 +9,8 @@ import Navbar from './components/Navbar';
 import HeroSlider from './components/HeroSlider'; 
 import Home from './components/Book';
 import RoomsSection from './components/RoomsSection';
+import TestimonialsCarousel from './components/TestimonialsCarousel';
+import LocationSection from './components/LocationSection';
 
 function App() {
   // Inicializo las traducciones (ahora puedo usar t() si lo necesito)
@@ -25,6 +27,10 @@ function App() {
       {/* Contenido principal de la home */}
       <Home />
       <RoomsSection />
+      <TestimonialsCarousel />
+      {/* Sección de ubicación */}
+      <LocationSection />
+
 
     </div>
   );

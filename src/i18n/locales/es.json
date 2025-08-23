@@ -1,12 +1,12 @@
 {
-  "mainTitle": "Bienvenido a Domaine du Sault",
+  "mainTitle": "Bienvenido a Domaine de Sault",
   "welcome": "Tu estancia de ensueño comienza aquí",
   "tittle": "Descubre el encanto de nuestras casas rurales en Auvernia, donde el confort y la naturaleza se encuentran.",
   "nav": {
     "book": "Reservar",
     "lodging": "Las habitaciones",
-    "prices": "Precios",
-    "contact": "Contacto"
+    "review": "Opiniones",
+    "location": "Ubicación"
   },
   "languages": {
     "fr": "Français",
@@ -29,7 +29,7 @@
   "nights_other": "{{count}} noches",
   "book.checkInLabel": "Entrada",
   "book.checkOutLabel": "Salida",
-  "book.titleh2": "Reserva tu estancia en Domaine du Sault",
+  "book.titleh2": "Reserva tu estancia en Domaine de Sault",
   "rooms": {
     "title": "Descubre nuestras habitaciones",
     "button": "Reservar ahora",
@@ -82,5 +82,8 @@
         "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
       }
     }
-  }
+  },
+  "reviews.title": "Lo que nuestros huéspedes opinan",
+  "location.title": "Dónde estamos",
+  "location.description": "El Domaine du Sault está situado en plena naturaleza, en el corazón de la Auvernia, con fácil acceso en coche y a pocos kilómetros de Dore-l'Église."
 }

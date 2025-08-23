@@ -1,0 +1,85 @@
+.location-section {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.location-title {
+    font-size: 2rem;
+    font-family: "Argesta", serif;
+    margin-bottom: 1rem;
+    color: #111;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.location-description {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #222;
+    font-family: "Argesta", serif;
+    line-height: 1.7;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+.contact-info {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-family: "Argesta", serif;
+  color: #333;
+}
+
+.contact-info {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-family: "Argesta", serif;
+  color: #333;
+}
+
+.contact-info h6 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #111;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.contact-info a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #e67e22;
+  text-decoration: underline;
+}
+
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

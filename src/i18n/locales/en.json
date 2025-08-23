@@ -1,12 +1,12 @@
 {
-  "mainTitle": "Welcome to Domaine du Sault",
+  "mainTitle": "Welcome to Domaine de Sault",
   "welcome": "Your dream stay starts here",
   "tittle": "Discover the charm of our rural houses in Auvergne, where comfort and nature meet.",
   "nav": {
     "book": "Book",
     "lodging": "Rooms",
     "prices": "Prices",
-    "contact": "Contact"
+    "location": "Location"
   },
   "languages": {
     "fr": "Français",
@@ -29,6 +29,7 @@
   "nights_other": "{{count}} nights",
   "book.checkInLabel": "Arrival",
   "book.checkOutLabel": "Departure",
+  "book.titleh2": "Book your stay at Domaine de Sault",
   "rooms": {
     "title": "Discover our rooms",
     "button": "Book Now",
@@ -81,5 +82,6 @@
         "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
       }
     }
-  }
+  },
+  "reviews.title": "What our guests say about us"
 }
