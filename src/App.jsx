@@ -1,37 +1,32 @@
-// Uso el hook de i18next para poder traducir textos con t('clave')
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
-// Importo los estilos principales de la aplicación
 import './App.css';
 
-// Importo los componentes que forman la página
 import Navbar from './components/Navbar';
 import HeroSlider from './components/HeroSlider'; 
 import Home from './components/Book';
 import RoomsSection from './components/RoomsSection';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
 import LocationSection from './components/LocationSection';
+import Footer from './components/footer';
 
 function App() {
-  // Inicializo las traducciones (ahora puedo usar t() si lo necesito)
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  // Actualiza el atributo lang del HTML según el idioma detectado
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
 
   return (
     <div className="App">
-      {/* Menú de navegación superior */}
       <Navbar />
-
-      {/* Hero section con slider de imágenes */}
       <HeroSlider /> 
-
-      {/* Contenido principal de la home */}
       <Home />
       <RoomsSection />
       <TestimonialsCarousel />
-      {/* Sección de ubicación */}
       <LocationSection />
-
-
+      <Footer />
     </div>
   );
 }

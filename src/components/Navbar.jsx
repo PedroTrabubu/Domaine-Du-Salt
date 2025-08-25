@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <a href="#book">
+        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img
             src="/logo/logo domaine de salt transparente.png"
             alt="Logo Domaine du Salt"
@@ -45,13 +45,13 @@ const Navbar = () => {
       </button>
 
       {/* Menú, clase "open" visible en móvil si menuOpen=true */}
-<ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-  <li><a href="#book" onClick={() => setMenuOpen(false)}>{t('nav.book')}</a></li>
-  <li><a href="#lodging" onClick={() => setMenuOpen(false)}>{t('nav.lodging')}</a></li>
-  <li><a href="#reviews" onClick={() => setMenuOpen(false)}>{t('nav.review')}</a></li>
-  <li><a href="#location" onClick={() => setMenuOpen(false)}>{t('nav.location')}</a></li>
-</ul>
-
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li><a href="#book" onClick={() => setMenuOpen(false)}>{t('nav.book')}</a></li>
+        <li><a href="#lodging" onClick={() => setMenuOpen(false)}>{t('nav.lodging')}</a></li>
+        <li><a href="#reviews" onClick={() => setMenuOpen(false)}>{t('nav.review')}</a></li>
+        <li><a href="#location" onClick={() => setMenuOpen(false)}>{t('nav.location')}</a></li>
+        <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t('nav.contact')}</a></li>
+      </ul>
 
       <div className="language-switcher">
         {Object.entries(flags).map(([lng, src]) => (

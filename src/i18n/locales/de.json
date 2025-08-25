@@ -6,6 +6,8 @@
     "book": "Startseite",
     "lodging": "Zimmer",
     "prices": "Preise",
+    "review": "Bewertungen",
+    "contact": "Kontakt",
     "location": "Lage"
   },
   "languages": {
@@ -70,5 +72,14 @@
       "price": "Ab 110€/Nacht"
     }
   },
-  "reviews.title": "Was unsere Gäste über uns sagen"
+  "reviews.title": "Was unsere Gäste über uns sagen",
+  "location.title": "Finden Sie uns",
+  "location.description": "Das Domaine de Sault liegt inmitten der Natur im Herzen der Auvergne, mit einfachem Zugang mit dem Auto und nur wenige Kilometer von Dore-l'Église entfernt.",
+  "contact.title": "Kontaktieren Sie uns",
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Kontakt",
+    "more": "Folgen Sie uns",
+    "partners": "Unsere Partner"
+  }
 }

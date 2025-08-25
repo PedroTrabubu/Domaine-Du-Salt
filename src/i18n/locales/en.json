@@ -6,7 +6,9 @@
     "book": "Book",
     "lodging": "Rooms",
     "prices": "Prices",
-    "location": "Location"
+    "location": "Location",
+    "review": "Reviews",
+    "nav.contact": "Contact"
   },
   "languages": {
     "fr": "Français",
@@ -83,5 +85,11 @@
       }
     }
   },
-  "reviews.title": "What our guests say about us"
+  "reviews.title": "What our guests say about us",
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "more": "Follow us",
+    "partners": "Our partners"
+  }
 }

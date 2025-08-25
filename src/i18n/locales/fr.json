@@ -4,8 +4,9 @@
   "tittle": "Découvrez le charme de nos maisons rurales en Auvergne, où confort et nature se rencontrent.",
   "nav": {
     "book": "Réserver",
-    "lodging": "Les chambres",
+    "lodging": "Chambres",
     "review": "Avis",
+    "contact": "Contact",
     "location": "Localisation"
   },
   "languages": {
@@ -85,5 +86,13 @@
   },
   "location.title": "Où nous trouver",
   "location.description": "Le Domaine de Sault est situé en pleine nature, au cœur de l'Auvergne, avec un accès facile en voiture et à quelques kilomètres de Dore-l'Église.",
-  "reviews.title": "Ce que que nos hôtes disent"
+  "reviews.title": "Ce que que nos hôtes disent",
+
+  "contact.title": "Contact nous",
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "more": "Suivez-nous",
+    "partners": "Nos partenaires"
+  }
 }

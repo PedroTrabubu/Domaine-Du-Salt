@@ -4,9 +4,10 @@
   "tittle": "Descubre el encanto de nuestras casas rurales en Auvernia, donde el confort y la naturaleza se encuentran.",
   "nav": {
     "book": "Reservar",
-    "lodging": "Las habitaciones",
+    "lodging": "Habitaciones",
     "review": "Opiniones",
-    "location": "Ubicación"
+    "location": "Ubicación",
+    "contact": "Contacto"
   },
   "languages": {
     "fr": "Français",
@@ -85,5 +86,12 @@
   },
   "reviews.title": "Lo que nuestros huéspedes opinan",
   "location.title": "Dónde estamos",
-  "location.description": "El Domaine du Sault está situado en plena naturaleza, en el corazón de la Auvernia, con fácil acceso en coche y a pocos kilómetros de Dore-l'Église."
+  "location.description": "El Domaine du Sault está situado en plena naturaleza, en el corazón de la Auvernia, con fácil acceso en coche y a pocos kilómetros de Dore-l'Église.",
+  "contact.title": "Contacto",
+  "footer": {
+    "navigation": "Navegador",
+    "contact": "Contacto",
+    "more": "Síguenos",
+    "partners": "Nuestros socios"
+  }
 }
