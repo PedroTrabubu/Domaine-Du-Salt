@@ -35,41 +35,49 @@
   "rooms": {
     "title": "Entdecken Sie unsere Zimmer",
     "button": "Jetzt buchen",
-    "gite": {
-      "name": "Gîte Valentin",
-      "description": "Ein gemütlicher Ort für die ganze Familie",
-      "features": ["Doppelbett", "WiFi", "Gartenblick"],
-      "price": "Ab 120€/Nacht"
-    },
-    "autrefois": {
-      "name": "Autrefois",
-      "description": "Rustikaler und traditioneller Charme",
-      "features": ["Eigenes Bad", "Kamin", "Ländlicher Blick"],
-      "price": "Ab 110€/Nacht"
-    },
-    "hubert": {
-      "name": "Hubert Zimmer",
-      "description": "Komfortables Doppelzimmer mit Tageslicht",
-      "features": ["Doppelbett", "Schrank", "Gemeinschaftsbad"],
-      "price": "Ab 100€/Nacht"
-    },
-    "oiseaux": {
-      "name": "Oiseaux Zimmer",
-      "description": "Ruhiges Zimmer mit Waldsicht",
-      "features": ["Einzelbett", "WiFi", "Schreibtisch"],
-      "price": "Ab 95€/Nacht"
-    },
-    "adelaide": {
-      "name": "Adelaide Zimmer",
-      "description": "Elegant und geräumig, ideal für Paare",
-      "features": ["Großes Doppelbett", "Eigenes Bad", "Balkon"],
-      "price": "Ab 130€/Nacht"
-    },
-    "salome": {
-      "name": "Salomé Zimmer",
-      "description": "Gemütliches Zimmer mit klassischer Einrichtung",
-      "features": ["Doppelbett", "WiFi", "Gartenblick"],
-      "price": "Ab 110€/Nacht"
+    "list": {
+      "gite": {
+        "name": "Gîte Valentin",
+        "description": "Ein gemütlicher Ort für die ganze Familie",
+        "features": ["Doppelbett", "WiFi", "Gartenblick"],
+        "price": "Ab 120€/Nacht",
+        "image": "/photos/rooms/gite_valentin/salon.png"
+      },
+      "autrefois": {
+        "name": "Autrefois",
+        "description": "Rustikaler und traditioneller Charme",
+        "features": ["Eigenes Bad", "Kamin", "Ländlicher Blick"],
+        "price": "Ab 110€/Nacht",
+        "image": "/photos/rooms/autrefois/salon.png"
+      },
+      "hubert": {
+        "name": "Hubert Zimmer",
+        "description": "Komfortables Doppelzimmer mit Tageslicht",
+        "features": ["Doppelbett", "Schrank", "Gemeinschaftsbad"],
+        "price": "Ab 100€/Nacht",
+        "image": "/photos/rooms/hubert/cama_hubert_resultado.avif"
+      },
+      "oiseaux": {
+        "name": "Oiseaux Zimmer",
+        "description": "Ruhiges Zimmer mit Waldsicht",
+        "features": ["Einzelbett", "WiFi", "Schreibtisch"],
+        "price": "Ab 95€/Nacht",
+        "image": "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif"
+      },
+      "adelaide": {
+        "name": "Adelaide Zimmer",
+        "description": "Elegant und geräumig, ideal für Paare",
+        "features": ["Großes Doppelbett", "Eigenes Bad", "Balkon"],
+        "price": "Ab 130€/Nacht",
+        "image": "/photos/rooms/adelaide/adelaide_salon.avif"
+      },
+      "salome": {
+        "name": "Salomé Zimmer",
+        "description": "Gemütliches Zimmer mit klassischer Einrichtung",
+        "features": ["Doppelbett", "WiFi", "Gartenblick"],
+        "price": "Ab 110€/Nacht",
+        "image": "/photos/rooms/salome/salome2_resultado.avif"
+      }
     }
   },
   "reviews.title": "Was unsere Gäste über uns sagen",
@@ -81,5 +89,23 @@
     "contact": "Kontakt",
     "more": "Folgen Sie uns",
     "partners": "Unsere Partner"
+  },
+  "roomDetail": {
+    "notFound": "Zimmer nicht gefunden.",
+    "back": "Zurück",
+    "size": "Größe: {{size}}",
+    "rating": "Bettkomfort: {{rating}}, basierend auf {{reviewsCount}} Bewertungen",
+    "priceLabel": "Preis",
+    "bathroom": "Badezimmer",
+    "views": "Aussicht auf:",
+    "amenities": "Ausstattung:",
+    "capacity": "Kapazität",
+    "bed": "Bett",
+    "cancellation": "Stornierungsbedingungen",
+    "payment": "Zahlung",
+    "breakfast": "Frühstück",
+    "availability": "Verfügbarkeit",
+    "nights": "Aufenthalt",
+    "priceDetail": "Endpreis"
   }
 }

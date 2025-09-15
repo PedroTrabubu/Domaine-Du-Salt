@@ -34,17 +34,20 @@
   "rooms": {
     "title": "Découvrez nos chambres",
     "button": "Réserver maintenant",
+    "roomDetail.priceLabel": "Prix:",
     "list": {
       "gite": {
         "name": "Gîte Valentin",
         "description": "Pour ceux qui souhaitent profiter du domaine comme à la maison, le Gîte Valentin offre l'intimité idéale pour un séjour à deux. Grand salon avec cuisine entièrement équipée, coin salon autour du poêle, chambre en mezzanine avec lit de 160, salle de bain et WC séparés, buanderie et jardin indépendant. Possibilité de lit bébé, linge de lit inclus. Entièrement équipé : télévision, réfrigérateur, lave-vaisselle, four, micro-ondes, vapeuruse, cafetière, bouilloire, grille-pain, lave-linge, sèche-linge, aspirateur, barbecue, mobilier de jardin, hamac, etc. Parking privé.",
+        "price": "Prix : 120€/nuit",
+        "size": "20 m²",
         "features": [
           "Lit double",
           "Cuisine équipée",
           "Salle de bain privée",
           "Jardin indépendant"
         ],
-        "price": "120€/nuit",
+
         "image": "/photos/rooms/gite_valentin/salon.png"
       },
       "autrefois": {
@@ -52,21 +55,21 @@
         "description": "Chambre traditionnelle auvergnate avec cheminée authentique, sol en pierre, entrée indépendante et petite terrasse.",
         "features": ["Lit double", "Vue sur le jardin"],
         "price": "100€/nuit",
-        "image": "/photos/rooms/autrefois/autrefois.png"
+        "image": "/photos/rooms/autrefois/salon.png"
       },
       "hubert": {
         "name": "Le grenier d'Hubert",
         "description": "Suite du domaine, inondée de soleil, vue sur la clairière, espace lecture et grande salle de bain.",
         "features": ["Lit king", "Salle de bain privée", "Vue sur la campagne"],
         "price": "110€/nuit",
-        "image": "/photos/rooms/hubert/cama_hubert.png"
+        "image": "/photos/rooms/hubert/cama_hubert_resultado.avif"
       },
       "salome": {
         "name": "Salomé",
         "description": "Caravane seventies et bohème au milieu d'un jardin naturel avec terrasse en bois, tout confort.",
         "features": ["Lit double", "Wi-Fi", "Salle de bain privée"],
         "price": "115€/nuit",
-        "image": "/photos/rooms/salome/salome2.png"
+        "image": "/photos/rooms/hubert/cama_hubert_resultado.avif"
       },
       "adelaide": {
         "name": "Adélaïde",
@@ -80,9 +83,27 @@
         "description": "Petit cocon avec vue extraordinaire sur les Monts du Forez, balcon pour observer la nature et les étoiles.",
         "features": ["Lit double", "Balcon", "Wi-Fi"],
         "price": "105€/nuit",
-        "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
+        "image": "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif"
       }
     }
+  },
+  "roomDetail": {
+    "notFound": "Chambre introuvable.",
+    "back": "Retour",
+    "size": "Taille : {{size}}",
+    "rating": "Confort du lit : {{rating}}, basé sur {{reviewsCount}} avis",
+    "priceLabel": "Prix",
+    "bathroom": "Salle de bain",
+    "views": "Vue sur :",
+    "amenities": "Équipements :",
+    "capacity": "Capacité",
+    "bed": "Lit",
+    "cancellation": "Conditions d’annulation",
+    "payment": "Paiement",
+    "breakfast": "Petit déjeuner",
+    "availability": "Disponibilité",
+    "nights": "Séjour",
+    "priceDetail": "Prix final"
   },
   "location.title": "Où nous trouver",
   "location.description": "Le Domaine de Sault est situé en pleine nature, au cœur de l'Auvergne, avec un accès facile en voiture et à quelques kilomètres de Dore-l'Église.",

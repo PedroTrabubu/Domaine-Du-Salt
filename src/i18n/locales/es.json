@@ -31,13 +31,18 @@
   "book.checkInLabel": "Entrada",
   "book.checkOutLabel": "Salida",
   "book.titleh2": "Reserva tu estancia en Domaine de Sault",
+  "roomDetail.back": "Volver",
   "rooms": {
     "title": "Descubre nuestras habitaciones",
     "button": "Reservar ahora",
+    "price": "Precio:",
+
     "list": {
       "gite": {
         "name": "Gîte Valentin",
         "description": "Disfruta de una escapada íntima para dos en Gîte Valentin, con cocina equipada y acogedor salón. Habitación en altillo, baño privado y jardín independiente para máxima tranquilidad. Una estancia confortable en plena naturaleza, perfecta para desconectar.",
+        "size": "20 m²",
+
         "features": [
           "Cama doble",
           "Cocina equipada",
@@ -52,35 +57,127 @@
         "description": "Habitación tradicional auvernesa con chimenea auténtica, suelo de piedra, entrada independiente y pequeña terraza.",
         "features": ["Cama doble", "Vistas al jardín"],
         "price": "100€/noche",
-        "image": "/photos/rooms/autrefois/autrefois.png"
+        "image": "/photos/rooms/autrefois/salon.png"
       },
       "hubert": {
-        "name": "Le grenier d'Hubert",
+        "name": "Le Grenier d'Hubert",
         "description": "Suite del dominio, bañada por el sol, con vistas al claro, área de lectura y baño grande.",
         "features": ["Cama king", "Baño privado", "Vista al campo"],
         "price": "110€/noche",
-        "image": "/photos/rooms/hubert/cama_hubert.png"
+        "image": "/photos/rooms/hubert/cama_hubert_resultado.avif"
       },
       "salome": {
         "name": "Salomé",
         "description": "Caravana estilo años 70 y bohemia en medio de un jardín natural con terraza de madera, todo confort.",
         "features": ["Cama doble", "Wi-Fi", "Baño privado"],
         "price": "115€/noche",
-        "image": "/photos/rooms/salome/salome2.png"
+        "image": "/photos/rooms/salome/salome2_resultado.avif"
       },
       "adelaide": {
         "name": "Adélaïde",
         "description": "Habitación con pequeño salón, chimenea y baño oculto.",
         "features": ["Cama doble", "Salón", "Baño privado"],
         "price": "130€/noche",
-        "image": "/photos/rooms/adelaide/adelaide_salon.avif"
+        "image": "/photos/rooms/adelaide/adelaide_salon.avif",
+        "adelaide": {
+          "name": "Adélaïde",
+          "description": "Habitación con pequeño salón, chimenea y baño oculto.",
+          "size": "24 m²",
+          "rating": "9.4",
+          "reviewsCount": 43,
+          "summary": "Guests will have a special experience as this double room offers a pool with a view and a sauna. Offering free toiletries, this double room includes a private bathroom with a walk-in shower, a hairdryer and slippers. Among the room amenities are a tea and coffee maker, a wardrobe, a tiled floor as well as an outdoor dining area and garden views.",
+          "bathroom": [
+            "Artículos de aseo gratis",
+            "Sauna",
+            "WC",
+            "Bañera o ducha",
+            "Zapatillas",
+            "Secador de pelo",
+            "Papel higiénico"
+          ],
+          "views": ["Vistas al jardín", "Vistas a la montaña"],
+          "amenities": [
+            "Escritorio",
+            "Ropa de cama",
+            "Suelo de baldosa / mármol",
+            "Acceso a pisos superiores solo mediante escaleras",
+            "Hervidor eléctrico",
+            "Muebles de exterior",
+            "Calefacción",
+            "Toallas",
+            "Armario",
+            "Zona de comedor exterior",
+            "Libros, DVD o música para niños",
+            "Juegos de mesa / puzles",
+            "Enchufe cerca de la cama",
+            "Tetera / cafetera",
+            "Política de humo: no se puede fumar"
+          ],
+          "price": "130€/noche",
+          "images": [
+            "/photos/rooms/adelaide/adelaide.avif",
+            "/photos/rooms/adelaide/adelaide_salon.avif",
+            "/photos/rooms/adelaide/cama.avif",
+            "/photos/rooms/adelaide/cama2.avif",
+            "/photos/rooms/adelaide/bano.avif"
+          ]
+        }
       },
       "oiseaux": {
-        "name": "Maison d'oiseaux",
+        "name": "Maison des Oiseaux",
         "description": "Pequeño refugio con vistas increíbles a los Monts du Forez, balcón para observar la naturaleza y las estrellas.",
         "features": ["Cama doble", "Balcón", "Wi-Fi"],
-        "price": "105€/noche",
-        "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
+        "price": "91€/noche",
+        "image": "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif",
+        "oiseaux": {
+          "size": "16 m²",
+          "rating": "9.4",
+          "reviewsCount": 43,
+          "summary": "The pool with a view and sauna are the standout features of this double room. The double room provides a private entrance, a tea and coffee maker, a balcony with garden views as well as a private bathroom featuring a shower. The unit offers 1 bed.",
+          "bathroom": [
+            "Artículos de aseo gratis",
+            "Sauna",
+            "WC",
+            "Bañera o ducha",
+            "Zapatillas",
+            "Secador de pelo",
+            "Papel higiénico"
+          ],
+          "views": ["Balcón", "Vistas al jardín", "Vistas a la montaña"],
+          "amenities": [
+            "Escritorio",
+            "Suelo de madera o parquet",
+            "Acceso a pisos superiores solo mediante escaleras",
+            "Muebles de exterior",
+            "Ventilador",
+            "Toallas",
+            "Libros, DVD o música para niños",
+            "Juegos de mesa / puzles",
+            "Enchufe cerca de la cama",
+            "Tetera / cafetera",
+            "Ropa de cama",
+            "Entrada privada",
+            "Hervidor eléctrico",
+            "Calefacción",
+            "Armario",
+            "Zona de comedor exterior",
+            "Política de humo: no se puede fumar"
+          ],
+          "capacity": "2 adultos",
+          "bed": "1 cama doble grande",
+          "cancellation": "Cancelación gratis antes del 22 de septiembre de 2025",
+          "payment": "No pagues nada hasta el 20 de septiembre de 2025",
+          "breakfast": "Desayuno incluido",
+          "availability": "Nos queda 1",
+          "nights": "1 noche, 2 adultos",
+          "priceDetail": "€91 incluye impuestos y cargos",
+          "images": [
+            "/photos/rooms/oiseaux/cama1.avif",
+            "/photos/rooms/oiseaux/cama2.avif",
+            "/photos/rooms/oiseaux/vistas.avif",
+            "/photos/rooms/oiseaux/bano.avif"
+          ]
+        }
       }
     }
   },
@@ -93,5 +190,23 @@
     "contact": "Contacto",
     "more": "Síguenos",
     "partners": "Nuestros socios"
+  },
+  "roomDetail": {
+    "notFound": "Habitación no encontrada.",
+    "back": "Volver",
+    "size": "Tamaño: {{size}}",
+    "rating": "Camas cómodas: {{rating}}, según {{reviewsCount}} comentarios",
+    "priceLabel": "Precio",
+    "bathroom": "Baño",
+    "views": "Vista a:",
+    "amenities": "Servicios:",
+    "capacity": "Capacidad",
+    "bed": "Cama",
+    "cancellation": "Política de cancelación",
+    "payment": "Pago",
+    "breakfast": "Desayuno",
+    "availability": "Disponibilidad",
+    "nights": "Estancia",
+    "priceDetail": "Precio final"
   }
 }

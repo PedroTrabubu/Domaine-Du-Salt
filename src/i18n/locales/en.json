@@ -53,21 +53,21 @@
         "description": "Traditional Auvergne room with authentic fireplace, stone floor, private entrance and small terrace.",
         "features": ["Double bed", "Garden view"],
         "price": "100€/night",
-        "image": "/photos/rooms/autrefois/autrefois.png"
+        "image": "/photos/rooms/autrefois/salon.png"
       },
       "hubert": {
         "name": "Le grenier d'Hubert",
         "description": "Domain suite, sunlit, view over the clearing, reading area and large bathroom.",
         "features": ["King bed", "Private bathroom", "Country view"],
         "price": "110€/night",
-        "image": "/photos/rooms/hubert/cama_hubert.png"
+        "image": "/photos/rooms/hubert/cama_hubert_resultado.avif"
       },
       "salome": {
         "name": "Salomé",
         "description": "Seventies and bohemian caravan in the middle of a natural garden with wooden terrace, fully equipped.",
         "features": ["Double bed", "Wi-Fi", "Private bathroom"],
         "price": "115€/night",
-        "image": "/photos/rooms/salome/salome2.png"
+        "image": "/photos/rooms/salome/salome2_resultado.avif"
       },
       "adelaide": {
         "name": "Adélaïde",
@@ -81,7 +81,7 @@
         "description": "Small cozy room with extraordinary view of the Monts du Forez, ideal for a romantic getaway.",
         "features": ["Double bed", "Balcony", "Shared bathroom"],
         "price": "95€/night",
-        "image": "/photos/rooms/oiseaux/cama_oiseaux.png"
+        "image": "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif"
       }
     }
   },
@@ -91,5 +91,23 @@
     "contact": "Contact",
     "more": "Follow us",
     "partners": "Our partners"
+  },
+  "roomDetail": {
+    "notFound": "Room not found.",
+    "back": "Back",
+    "size": "Size: {{size}}",
+    "rating": "Comfortable beds: {{rating}}, based on {{reviewsCount}} reviews",
+    "priceLabel": "Price",
+    "bathroom": "Bathroom",
+    "views": "View of:",
+    "amenities": "Amenities:",
+    "capacity": "Capacity",
+    "bed": "Bed",
+    "cancellation": "Cancellation policy",
+    "payment": "Payment",
+    "breakfast": "Breakfast",
+    "availability": "Availability",
+    "nights": "Stay",
+    "priceDetail": "Final price"
   }
 }
