@@ -7,7 +7,7 @@ import Home from './components/Book';
 import RoomsSection from './components/RoomsSection';
 import TestimonialsCarousel from './components/TestimonialsCarousel';
 import LocationSection from './components/LocationSection';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import RoomDetail from './components/RoomDetail'; // tu página de detalle
 
 function App() {

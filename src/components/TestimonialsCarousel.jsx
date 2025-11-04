@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
+// Importamos React y los hooks useState y useEffect para manejar estado y efectos secundarios.
+
 import { useTranslation } from "react-i18next";
+// Importamos useTranslation para traducir textos según el idioma activo.
+
 import "./TestimonialsCarousel.css";
+// Importamos la hoja de estilos específica para este carrusel de testimonios.
 
 const ratings = [
-  { site: "Booking.com", score: "⭐ 9.7/10", link: "https://www.booking.com/hotel/fr/domaine-de-sault.es.html?aid=7344163&label=metatripad-link-dmetafr-hotel-4778869_xqdz-677efa6baa8afcd76c25b17ac23e41ad_los-03_bw-010_tod-12_dom-es_curr-EUR_gst-02_nrm-01_clkid-44860ed1-063b-4942-b604-d699599ffd5c_aud-0000_mbl-M_pd-T_sc-2_defdate-0_spo-0_clksrc-0_mcid-10-Share-ewAY3I%401755858718-Share-JOr4NE%401756980510&sid=010fb7dbd67ee6544c7b7491344e0597&all_sr_blocks=477886902_151534570_2_1_0&checkin=2025-10-06&checkout=2025-10-07&dest_id=-1424316&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=477886902_151534570_2_1_0&hpos=1&matching_block_id=477886902_151534570_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=477886902_151534570_2_1_0__8348&srepoch=1756980538&srpvid=b4b947585b09024e&type=total&ucfs=1&" },
+  { site: "Booking.com", score: "⭐ 9.7/10", link: "https://www.booking.com/hotel/fr/domaine-de-sault.es.html?..." },
   { site: "LastMinute", score: "⭐ 9.8/10", link: "https://www.fr.lastminute.com/hotel/france/dore-l-eglise/domaine-de-sault_hid-10504416" },
   { site: "TripAdvisor", score: "⭐ 4.7/5", link: "https://www.tripadvisor.fr/Hotel_Review-g2545280-d5049482-Reviews-Domaine_De_Sault-Dore_l_Eglise_Puy_de_Dome_Auvergne_Rhone_Alpes.html?m=19905" },
-  { site: "Google", score: "⭐ 4.5/5", link: "https://www.google.com/travel/search?q=Domaine%20de%20Sault&g2lb=4965990%2C4969803%2C72302247%2C72317059%2C72414906%2C72471280%2C72472051%2C72485658%2C72559352%2C72560029%2C72573224%2C72616120%2C72647020%2C72686036%2C72760082%2C72803964%2C72832976%2C72882230%2C72958624%2C72959983%2C72990341%2C73010541%2C73064764&hl=es-FR&gl=fr&ssta=1&ts=CAEaRwopEicyJTB4NDdmNjc3ZDQ5ZDdhNDgzZDoweGJhOGRlYThkMzhkZmEyZTQSGhIUCgcI6Q8QChgQEgcI6Q8QChgRGAEyAhAA&qs=CAEyFENnc0k1TVgteHRQUi1zYTZBUkFCOAJCCQnkot84jeqNug&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjQ1YzQ_aCPAxUAAAAAHQAAAAAQBA" },
+  { site: "Google", score: "⭐ 4.5/5", link: "https://www.google.com/travel/search?q=Domaine%20de%20Sault&hl=es-FR&gl=fr&..." },
 ];
+// Creamos un arreglo con las puntuaciones de distintas plataformas, incluyendo el sitio, la puntuación y el enlace.
 
 const testimonials = [
   {
@@ -47,10 +53,16 @@ const testimonials = [
     author: "Carlota, España",
   },
 ];
+// Creamos un arreglo de testimonios con texto y autor para mostrar en el carrusel.
 
 const TestimonialsCarousel = () => {
+  // Definimos el componente funcional del carrusel de testimonios.
+
   const { t } = useTranslation();
+  // Obtenemos la función t para traducir textos según el idioma.
+
   const [current, setCurrent] = useState(0);
+  // Creamos un estado para almacenar el índice del testimonio que se muestra actualmente.
 
   // Auto slide cada 6 segundos
   useEffect(() => {
@@ -58,16 +70,23 @@ const TestimonialsCarousel = () => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 6000);
     return () => clearInterval(timer);
+    // Creamos un efecto para cambiar automáticamente el testimonio cada 6 segundos.
+    // Limpiamos el intervalo cuando el componente se desmonta.
   }, []);
 
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
+  // Función para pasar al siguiente testimonio de forma circular.
+
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // Función para retroceder al testimonio anterior de forma circular.
 
   return (
     <section id="reviews" className="reviews-section">
+      {/* Sección principal de testimonios */}
       <h4 className="reviews-title">
         {t("reviews.title", "Opiniones de nuestros huéspedes")}
       </h4>
+      {/* Mostramos el título de la sección traducido */}
 
       {/* Ratings */}
       <div className="ratings-summary">
@@ -84,16 +103,22 @@ const TestimonialsCarousel = () => {
           </a>
         ))}
       </div>
+      {/* Mostramos las puntuaciones de distintos sitios con enlace a la plataforma correspondiente */}
 
       {/* Carrusel */}
       <div className="testimonials-carousel">
         <div className="carousel-container">
           <button className="nav-btn left" onClick={prev}>❮</button>
+          {/* Botón para ir al testimonio anterior */}
+
           <div className="testimonial-card">
             <p className="testimonial-text">“{testimonials[current].text}”</p>
             <span className="testimonial-author">— {testimonials[current].author}</span>
           </div>
+          {/* Mostramos el testimonio actual con su autor */}
+
           <button className="nav-btn right" onClick={next}>❯</button>
+          {/* Botón para ir al siguiente testimonio */}
         </div>
 
         <div className="dots">
@@ -105,9 +130,11 @@ const TestimonialsCarousel = () => {
             ></span>
           ))}
         </div>
+        {/* Indicadores tipo “punto” para seleccionar un testimonio directamente */}
       </div>
     </section>
   );
 };
 
 export default TestimonialsCarousel;
+// Exportamos el componente para poder usarlo en otras partes de la aplicación.
