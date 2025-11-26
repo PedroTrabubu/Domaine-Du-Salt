@@ -20,7 +20,7 @@ const RoomDetail = () => {
   // Creamos la función navigate para poder regresar o redirigir al usuario a otras rutas.
 
   // 🔹 Obtener lista de habitaciones traducida
- const roomsObj = t("rooms.list", { returnObjects: true }) || {};
+  const roomsObj = t("rooms.list", { returnObjects: true }) || {};
   // Obtenemos la lista de habitaciones desde la traducción y la convertimos en un objeto.
 
   const room = roomsObj[roomId];
@@ -31,17 +31,17 @@ const RoomDetail = () => {
 
   return (
     <div className="room-detail-container">
-      {/* 🔙 Botón atrás */}
+      {/* Botón atrás */}
       <button className="back-btn" onClick={() => navigate(-1)}>
         ← {t("roomDetail.back")}
       </button>
       {/* Creamos un botón que permite al usuario volver a la página anterior. */}
 
-      {/* 🏷️ Título */}
+      {/* Título */}
       <h1 className="room-title">{room.name}</h1>
       {/* Mostramos el nombre de la habitación como título principal. */}
 
-      {/* 🖼️ Galería */}
+      {/* Galería */}
       <div className="room-gallery">
         {room.images?.map((img, idx) => (
           <img
@@ -155,7 +155,7 @@ const RoomDetail = () => {
         {/* Mostramos detalles adicionales del precio si existen. */}
       </div>
 
-      {/* 🔘 Botón reserva */}
+      {/* Botón reserva */}
       <button
         className="reserve-btn"
         onClick={() => {
@@ -164,8 +164,7 @@ const RoomDetail = () => {
 
           setTimeout(() => {
             const bookingForm = document.getElementById("booking-form");
-            if (bookingForm)
-              bookingForm.scrollIntoView({ behavior: "smooth" });
+            if (bookingForm) bookingForm.scrollIntoView({ behavior: "smooth" });
           }, 100);
           // Después de redirigir, hacemos scroll al formulario de reservas si existe.
         }}
