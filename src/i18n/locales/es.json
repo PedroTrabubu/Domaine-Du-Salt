@@ -325,10 +325,14 @@
         "nights": "1 noche, 2 adultos",
         "priceDetail": "€91 incluye impuestos y cargos",
         "images": [
-          "/photos/rooms/oiseaux/cama1.avif",
-          "/photos/rooms/oiseaux/cama2.avif",
-          "/photos/rooms/oiseaux/vistas.avif",
-          "/photos/rooms/oiseaux/bano.avif"
+          "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif",
+          "/photos/rooms/oiseaux/cama_resultado.avif",
+          "/photos/rooms/oiseaux/cama-terraza_resultado.avif",
+          "/photos/rooms/oiseaux/cama-ventana_resultado.avif",
+          "/photos/rooms/oiseaux/terraza-oiseaux_resultado.avif",
+          "/photos/rooms/oiseaux/terraza2_resultado.avif",
+          "/photos/rooms/oiseaux/terraza3_resultado.avif",
+          "/photos/rooms/oiseaux/terraza4_resultado.avif"
         ]
       }
     }
