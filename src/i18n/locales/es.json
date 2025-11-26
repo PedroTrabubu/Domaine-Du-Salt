@@ -307,7 +307,10 @@
       "oiseaux": {
         "name": "Maison des Oiseaux",
         "description": "Pequeño refugio con vistas increíbles a los Monts du Forez, balcón para observar la naturaleza y las estrellas.",
-        "features": ["Cama doble", "Balcón", "Wi-Fi"],
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": " Cama doble" },
+          { "icon": "/icons/balcon.svg", "text": " Balcón" },
+          { "icon": "/icons/wifi.svg", "text": " Wi-Fi" }],
         "price": "91€/noche",
         "image": "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif",
         "size": "16 m²",
