@@ -1,33 +1,69 @@
 import { useParams, useNavigate } from "react-router-dom";
-// Importamos useParams para obtener parámetros de la URL y useNavigate para navegar programáticamente.
-
 import { useTranslation } from "react-i18next";
-// Importamos useTranslation para poder traducir textos según el idioma activo.
+import { useState, useEffect, useRef } from "react";
 
 import "./RoomDetail.css";
-// Importamos la hoja de estilos específica para esta página de detalles de habitación.
 
 const RoomDetail = () => {
-  // Definimos el componente funcional RoomDetail.
-
   const { t } = useTranslation();
-  // Obtenemos la función t para traducir los textos dentro del componente.
-
   const { roomId } = useParams();
-  // Obtenemos el parámetro roomId de la URL para saber qué habitación mostrar.
-
   const navigate = useNavigate();
-  // Creamos la función navigate para poder regresar o redirigir al usuario a otras rutas.
 
-  // 🔹 Obtener lista de habitaciones traducida
   const roomsObj = t("rooms.list", { returnObjects: true }) || {};
-  // Obtenemos la lista de habitaciones desde la traducción y la convertimos en un objeto.
-
   const room = roomsObj[roomId];
-  // Buscamos la habitación específica según el roomId obtenido de la URL.
 
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
+  // ➜ refs para swipe móvil
+  const touchStartX = useRef(null);
+
+  const images = room?.images || [];
+
+  /* ----------------------------------------------------
+     ⌨️ CONTROL POR TECLADO (← → ESC)
+  ---------------------------------------------------- */
+  useEffect(() => {
+    if (!room || lightboxIndex === null) return;
+
+    const handleKey = (e) => {
+      if (e.key === "ArrowRight") {
+        setLightboxIndex((lightboxIndex + 1) % images.length);
+      }
+      if (e.key === "ArrowLeft") {
+        setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
+      }
+      if (e.key === "Escape") {
+        setLightboxIndex(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxIndex, images.length, room]);
+
+  /* ----------------------------------------------------
+     📱 SWIPE MÓVIL
+  ---------------------------------------------------- */
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!touchStartX.current) return;
+
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+
+    if (delta > 50) {
+      setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
+    } else if (delta < -50) {
+      setLightboxIndex((lightboxIndex + 1) % images.length);
+    }
+
+    touchStartX.current = null;
+  };
+
+  // 🔹 Render condicional fuera de Hooks
   if (!room) return <p className="not-found">{t("roomDetail.notFound")}</p>;
-  // Si la habitación no existe, mostramos un mensaje de "No encontrada" y detenemos la renderización.
 
   return (
     <div className="room-detail-container">
@@ -35,146 +71,324 @@ const RoomDetail = () => {
       <button className="back-btn" onClick={() => navigate(-1)}>
         ← {t("roomDetail.back")}
       </button>
-      {/* Creamos un botón que permite al usuario volver a la página anterior. */}
 
       {/* Título */}
       <h1 className="room-title">{room.name}</h1>
-      {/* Mostramos el nombre de la habitación como título principal. */}
 
-      {/* Galería */}
-      <div className="room-gallery">
-        {room.images?.map((img, idx) => (
-          <img
-            key={idx}
-            src={img}
-            alt={`${room.name} ${idx + 1}`}
-            className="room-gallery-img"
-            onError={(e) => (e.currentTarget.src = "/photos/placeholder.png")}
-          />
-        ))}
-      </div>
-      {/* Mostramos todas las imágenes de la habitación y usamos un placeholder si alguna falla. */}
+      {/* Galería tipo Airbnb */}
+      {images.length > 0 && (
+        <div className="room-gallery">
+          {images.slice(0, 5).map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`${room.name} ${i + 1}`}
+              onClick={() => setLightboxIndex(i)}
+              onError={(e) => (e.currentTarget.src = "/photos/placeholder.png")}
+            />
+          ))}
+        </div>
+      )}
 
-      {/* ℹ️ Información */}
+      {/* Información básica */}
       <div className="room-info">
-        {room.size && <p>{t("roomDetail.size", { size: room.size })}</p>}
-        {/* Mostramos el tamaño de la habitación si está disponible. */}
+        {room.size && (
+          <p className="info-line">
+            <SvgSize />
+            {t("roomDetail.size", { size: room.size })}
+          </p>
+        )}
 
         {room.rating && (
-          <p>
+          <p className="info-line">
+            <SvgStar />
             {t("roomDetail.rating", {
               rating: room.rating,
               reviewsCount: room.reviewsCount,
             })}
           </p>
         )}
-        {/* Mostramos la calificación y cantidad de reseñas si existen. */}
 
         <p className="room-summary">{room.summary || room.description}</p>
-        {/* Mostramos un resumen o la descripción de la habitación. */}
 
         {room.price && (
-          <p className="room-price">
+          <p className="info-line room-price">
+            <SvgPrice />
             <strong>{t("roomDetail.priceLabel")}:</strong> {room.price}
           </p>
         )}
-        {/* Mostramos el precio si está definido. */}
       </div>
 
-      {/* 🔹 Secciones extra */}
+      {/* Secciones */}
       <div className="room-sections">
         {room.bathroom?.length > 0 && (
           <div className="room-section">
             <h3>{t("roomDetail.bathroom")}</h3>
             <ul>
               {room.bathroom.map((item, i) => (
-                <li key={i}>🛁 {item}</li>
+                <li className="section-item" key={i}>
+                  <SvgBath />
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
         )}
-        {/* Mostramos los elementos del baño si existen. */}
 
         {room.views?.length > 0 && (
           <div className="room-section">
             <h3>{t("roomDetail.views")}</h3>
             <ul>
               {room.views.map((v, i) => (
-                <li key={i}>🌄 {v}</li>
+                <li className="section-item" key={i}>
+                  <SvgView />
+                  {v}
+                </li>
               ))}
             </ul>
           </div>
         )}
-        {/* Mostramos las vistas o panoramas de la habitación si existen. */}
 
         {room.amenities?.length > 0 && (
           <div className="room-section">
             <h3>{t("roomDetail.amenities")}</h3>
             <ul>
               {room.amenities.map((a, i) => (
-                <li key={i}>✔️ {a}</li>
+                <li className="section-item" key={i}>
+                  <SvgCheck />
+                  {a}
+                </li>
               ))}
             </ul>
           </div>
         )}
-        {/* Mostramos los servicios o comodidades disponibles si existen. */}
       </div>
 
-      {/* Datos adicionales */}
+      {/* Información extendida */}
       <div className="room-extra">
         {room.capacity && (
-          <p>
+          <p className="info-line">
+            <SvgPeople />
             <strong>{t("roomDetail.capacity")}:</strong> {room.capacity}
           </p>
         )}
-        {/* Mostramos la capacidad máxima de la habitación. */}
 
         {room.bed && (
-          <p>
+          <p className="info-line">
+            <SvgBed />
             <strong>{t("roomDetail.bed")}:</strong> {room.bed}
           </p>
         )}
-        {/* Mostramos el tipo de cama si está definido. */}
 
-        {room.cancellation && <p>❌ {room.cancellation}</p>}
-        {/* Mostramos la política de cancelación si existe. */}
+        {room.cancellation && (
+          <p className="info-line">
+            <SvgCancel />
+            {room.cancellation}
+          </p>
+        )}
 
-        {room.payment && <p>💳 {room.payment}</p>}
-        {/* Mostramos las opciones de pago si están definidas. */}
+        {room.payment && (
+          <p className="info-line">
+            <SvgCard />
+            {room.payment}
+          </p>
+        )}
 
-        {room.breakfast && <p>🥐 {room.breakfast}</p>}
-        {/* Mostramos si se incluye desayuno. */}
+        {room.breakfast && (
+          <p className="info-line">
+            <SvgBreakfast />
+            {room.breakfast}
+          </p>
+        )}
 
-        {room.availability && <p>📌 {room.availability}</p>}
-        {/* Mostramos la disponibilidad de la habitación. */}
+        {room.availability && (
+          <p className="info-line">
+            <SvgPin />
+            {room.availability}
+          </p>
+        )}
 
-        {room.nights && <p>🛌 {room.nights}</p>}
-        {/* Mostramos la cantidad mínima de noches si está definida. */}
+        {room.nights && (
+          <p className="info-line">
+            <SvgMoon />
+            {room.nights}
+          </p>
+        )}
 
-        {room.priceDetail && <p>💰 {room.priceDetail}</p>}
-        {/* Mostramos detalles adicionales del precio si existen. */}
+        {room.priceDetail && (
+          <p className="info-line">
+            <SvgCoin />
+            {room.priceDetail}
+          </p>
+        )}
       </div>
 
-      {/* Botón reserva */}
+      {/* Botón de reserva */}
       <button
         className="reserve-btn"
         onClick={() => {
           navigate("/");
-          // Redirigimos al inicio al pulsar el botón.
-
           setTimeout(() => {
             const bookingForm = document.getElementById("booking-form");
             if (bookingForm) bookingForm.scrollIntoView({ behavior: "smooth" });
           }, 100);
-          // Después de redirigir, hacemos scroll al formulario de reservas si existe.
         }}
       >
         {t("rooms.button")}
       </button>
-      {/* Mostramos el botón para reservar la habitación. */}
+
+      {/* LIGHTBOX */}
+      {lightboxIndex !== null && (
+        <div
+          className="lightbox"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Cerrar */}
+          <span
+            className="lightbox-close"
+            onClick={() => setLightboxIndex(null)}
+          >
+            <span className="close-text">{t("lightbox.close")} </span>
+            <svg className="close-icon" viewBox="0 0 24 24">
+              <path
+                d="M18 6L6 18M6 6l12 12"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+
+          {/* Flecha izquierda */}
+          <span
+            className="lightbox-arrow left"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex(
+                (lightboxIndex - 1 + images.length) % images.length
+              );
+            }}
+          >
+            ‹
+          </span>
+
+          {/* Imagen central */}
+          <img
+            src={images[lightboxIndex]}
+            alt="fullsize"
+            className="lightbox-image"
+          />
+          <div className="lightbox-counter">
+            {lightboxIndex + 1} / {images.length}
+          </div>
+
+          {/* Flecha derecha */}
+          <span
+            className="lightbox-arrow right"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((lightboxIndex + 1) % images.length);
+            }}
+          >
+            ›
+          </span>
+
+          {/* Miniaturas */}
+          <div className="lightbox-thumbnails">
+            {images.map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                className={
+                  "lightbox-thumb " +
+                  (i === lightboxIndex ? "lightbox-thumb-active" : "")
+                }
+                onClick={() => setLightboxIndex(i)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default RoomDetail;
-// Exportamos el componente RoomDetail para poder usarlo en otras partes de la aplicación.
+
+/* ----------------------------------------
+ SVG ICONS
+---------------------------------------- */
+const SvgSize = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M3 3h18v2H3zm0 16h18v2H3zM3 7h2v10H3zm16 0h2v10h-2z" />
+  </svg>
+);
+const SvgStar = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 2l3 7 7 .6-5 4.9L18 22l-6-3.3L6 22l1-7.5-5-4.9 7-.6z" />
+  </svg>
+);
+const SvgBath = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M7 3a3 3 0 016 0v3H7zm13 6v5a5 5 0 01-10 0V9H3v5h2a7 7 0 0014 0h2V9z" />
+  </svg>
+);
+const SvgView = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 110-10 5 5 0 010 10z" />
+  </svg>
+);
+const SvgCheck = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M20 6l-11 11-5-5 2-2 3 3 9-9z" />
+  </svg>
+);
+const SvgPrice = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 1L3 9l9 14 9-14z" />
+  </svg>
+);
+const SvgPeople = () => (
+  <svg viewBox="0 0 24 24">
+    <circle cx="9" cy="8" r="4" />
+    <path d="M17 11a4 4 0 110-8 4 4 0 010 8z" />
+    <path d="M2 22a7 7 0 0114 0H2zm16 0a6 6 0 00-6-6" />
+  </svg>
+);
+const SvgBed = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M3 7h18v10H3zm2 2v3h5V9zm7 0v3h7V9z" />
+  </svg>
+);
+const SvgCancel = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 110 20 10 10 0 010-20zm5 13l-8-8m8 0l-8 8" />
+  </svg>
+);
+const SvgCard = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M2 6h20v12H2zm0 4h20" />
+  </svg>
+);
+const SvgBreakfast = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M4 10h16v2H4zm2 4h12v6H6zM9 4a3 3 0 016 0v2H9z" />
+  </svg>
+);
+const SvgPin = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7zm0 9a2 2 0 100-4 2 2 0 000 4z" />
+  </svg>
+);
+const SvgMoon = () => (
+  <svg viewBox="0 0 24 24">
+    <path d="M12 2a9 9 0 100 18A7 7 0 0112 2z" />
+  </svg>
+);
+const SvgCoin = () => (
+  <svg viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10" />
+    <path d="M8 12h8" />
+  </svg>
+);
