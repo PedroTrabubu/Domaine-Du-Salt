@@ -20,7 +20,7 @@ const RoomDetail = () => {
   // Creamos la función navigate para poder regresar o redirigir al usuario a otras rutas.
 
   // 🔹 Obtener lista de habitaciones traducida
-  const roomsObj = t("rooms.list", { returnObjects: true }) || {};
+ const roomsObj = t("rooms.list", { returnObjects: true }) || {};
   // Obtenemos la lista de habitaciones desde la traducción y la convertimos en un objeto.
 
   const room = roomsObj[roomId];
