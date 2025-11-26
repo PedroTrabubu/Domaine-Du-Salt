@@ -127,3 +127,11 @@
 .room-btn:hover {
   background: #444;
 }
+
+.feature-icon {
+  width: 30px;    /* ancho deseado */
+  height: 30px;   /* altura deseada */
+  padding-right: 10px;
+  object-fit: contain; /* para mantener proporciones */
+  vertical-align: middle; /* opcional, alinea con el texto */
+}

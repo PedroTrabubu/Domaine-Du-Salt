@@ -40,10 +40,13 @@
         "name": "Gîte Valentin",
         "description": "Enjoy an intimate getaway for two at Gîte Valentin, featuring a fully equipped kitchen and cozy lounge area. Mezzanine bedroom, private bathroom, and independent garden for complete privacy. A comfortable stay immersed in nature, perfect for relaxing.",
         "features": [
-          "Double bed",
-          "Equipped kitchen",
-          "Private bathroom",
-          "Private garden"
+          { "icon": "/icons/cama-doble.svg", "text": "Double bed" },
+          { "icon": "/icons/cocina.svg", "text": "Equipped kitchen" },
+          { "icon": "/icons/banio.svg", "text": "Private bathroom" },
+          {
+            "icon": "/icons/jardin-independiente.svg",
+            "text": "Private garden"
+          }
         ],
         "price": "120€/night",
         "image": "/photos/rooms/gite_valentin/salon.png"
@@ -51,35 +54,54 @@
       "autrefois": {
         "name": "Autrefois",
         "description": "Traditional Auvergne room with authentic fireplace, stone floor, private entrance and small terrace.",
-        "features": ["Double bed", "Garden view"],
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": "Double bed" },
+          { "icon": "/icons/jardin.svg", "text": "Garden view" }
+        ],
         "price": "100€/night",
         "image": "/photos/rooms/autrefois/salon.png"
       },
       "hubert": {
         "name": "Le grenier d'Hubert",
         "description": "Domain suite, sunlit, view over the clearing, reading area and large bathroom.",
-        "features": ["King bed", "Private bathroom", "Country view"],
+        "features": [
+          { "icon": "/icons/cama-king.svg", "text": "King bed" },
+          { "icon": "/icons/banio.svg", "text": "Private bathroom" },
+          { "icon": "/icons/campo.svg", "text": "Country view" }
+        ],
         "price": "110€/night",
         "image": "/photos/rooms/hubert/cama_hubert_resultado.avif"
       },
       "salome": {
         "name": "Salomé",
         "description": "Seventies and bohemian caravan in the middle of a natural garden with wooden terrace, fully equipped.",
-        "features": ["Double bed", "Wi-Fi", "Private bathroom"],
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": "Double bed" },
+          { "icon": "/icons/banio.svg", "text": "Private bathroom" },
+          { "icon": "/icons/wifi.svg", "text": "Wi-Fi" }
+        ],
         "price": "115€/night",
         "image": "/photos/rooms/salome/salome2_resultado.avif"
       },
       "adelaide": {
         "name": "Adélaïde",
         "description": "Room with small lounge corner, fireplace and hidden bathroom.",
-        "features": ["Double bed", "Lounge", "Private bathroom"],
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": "Double bed" },
+          { "icon": "/icons/salon.svg", "text": "Lounge" },
+          { "icon": "/icons/banio.svg", "text": "Private bathroom" }
+        ],
         "price": "130€/night",
         "image": "/photos/rooms/adelaide/adelaide_salon.avif"
       },
       "oiseaux": {
         "name": "Maison d'oiseaux",
         "description": "Small cozy room with extraordinary view of the Monts du Forez, ideal for a romantic getaway.",
-        "features": ["Double bed", "Balcony", "Shared bathroom"],
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": "Double bed" },
+          { "icon": "/icons/balcon.svg", "text": "Balcony" },
+          { "icon": "/icons/banio.svg", "text": "Shared bathroom" }
+        ],
         "price": "95€/night",
         "image": "/photos/rooms/oiseaux/cama_oiseaux_resultado.avif"
       }

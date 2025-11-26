@@ -46,6 +46,14 @@
         "rating": "9.6",
         "reviewsCount": 57,
         "summary": "El Gîte Valentin es un alojamiento íntimo y autónomo, perfecto para disfrutar del dominio como en casa. Su amplia zona de estar incluye una cocina completamente equipada —del tostador al tire-bouchon— y un acogedor salón alrededor del poêle à granulés. La habitación, situada en un cálido altillo, cuenta con una cama de 160 cm. El alojamiento dispone además de baño con ducha, WC independiente, buanderie equipada, y un jardín privado a salvo de miradas, ideal para descansar en plena naturaleza. Linge fourni y posibilidad de cuna para bebé.",
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": " Cama doble" },
+          { "icon": "/icons/cocina.svg", "text": " Cocina equipada" },
+          { "icon": "/icons/banio.svg", "text": " Baño privado" },
+          {
+            "icon": "/icons/jardin-independiente.svg",
+            "text": " Jardín independiente"
+          }],
         "bathroom": [
           "Ducha",
           "Artículos de aseo gratuitos",
@@ -102,6 +110,10 @@
         "rating": "9.2",
         "reviewsCount": 38,
         "summary": "La habitación Autrefois conserva toda la esencia del interior tradicional auvergnat: pavimento de piedra, cloisons antiguas de madera, una gran chimenea en piedra con linteau en bois y un potager bajo la ventana. El acogedor lit clos de 140 cm, completamente de madera, crea un pequeño nido perfecto tanto en verano —cuando la habitación es luminosa y fresca— como en invierno, donde la calidez del poêle à bois aporta una atmósfera suave y envolvente. La sala de baño combina elementos antiguos con comodidades modernas: lavabo tradicional, ducha, WC y calefacción eléctrica. Con entrada independiente y una pequeña terraza, Autrefois es un espacio íntimo y auténtico para quienes buscan un contacto directo con la historia y la tranquilidad.",
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": " Cama doble" },
+          { "icon": "/icons/jardin.svg", "text": " Vistas al jardín" }
+        ],
         "bathroom": [
           "Lavabo antiguo",
           "Ducha",
@@ -147,6 +159,11 @@
         "rating": "9.5",
         "reviewsCount": 41,
         "summary": "Le Grenier d’Hubert es la suite más espaciosa y luminosa del dominio. Ocupando todo el primer nivel, ofrece una vista excepcional sobre la clairière, el jardín y los Monts du Forez. La habitación cuenta con una amplia zona de descanso con cama king, un acogedor rincón de lectura y un pequeño salón orientado hacia el bassin de nage. Su gran sala de baño, luminosa y confortable, aporta el toque final a un espacio pensado para una estancia tranquila, cálida y llena de serenidad.",
+        "features": [
+          { "icon": "/icons/cama-king.svg", "text": " Cama king" },
+          { "icon": "/icons/banio.svg", "text": " Baño privado" },
+          { "icon": "/icons/campo.svg", "text": " Vista al campo" }
+        ],
         "bathroom": [
           "Amplio baño privado",
           "Ducha",
@@ -194,6 +211,11 @@
         "rating": "9.3",
         "reviewsCount": 29,
         "summary": "Salomé es nuestra caravana seventies y bohemia, instalada en medio de un jardín natural con vistas a la clairière. Aislada en uno de los rincones más tranquilos del dominio, ofrece una experiencia íntima y auténtica en plena naturaleza sin renunciar al confort de una habitación de huéspedes. Dispone de una pequeña terraza de madera, hamac para relajarse, cama doble cómoda y todas las comodidades necesarias para una escapada desconectada y única.",
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": " Cama doble" },
+          { "icon": "/icons/banio.svg", "text": " Baño privado" },
+          { "icon": "/icons/wifi.svg", "text": " Wi-Fi" }
+        ],
         "bathroom": [
           "Baño privado",
           "Ducha",
@@ -233,6 +255,11 @@
         "rating": "9.4",
         "reviewsCount": 43,
         "summary": "La habitación Adélaïde es un espacio acogedor y elegante que combina encanto clásico y comodidades modernas. Cuenta con una gran cama de 180 cm —o dos camas individuales bajo petición—, un pequeño rincón de estar perfecto para relajarse, y una chimenea decorativa que aporta calidez al ambiente. El baño privado, lleno de luz natural, dispone de una ducha italiana y un antiguo lavabo orientado hacia el jardín. Desde sus ventanas, los huéspedes disfrutarán de una vista preciosa de las montañas y del jardín, ideal para desconectar y disfrutar de la tranquilidad del entorno.",
+        "features": [
+          { "icon": "/icons/cama-doble.svg", "text": " Cama doble" },
+          { "icon": "/icons/salon.svg", "text": " Salón" },
+          { "icon": "/icons/banio.svg", "text": " Baño privado" }
+        ],
         "bathroom": [
           "Artículos de aseo gratuitos",
           "WC",

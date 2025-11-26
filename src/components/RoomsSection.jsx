@@ -21,6 +21,8 @@ const RoomsSection = () => {
   // Si no existe, usamos un objeto vacío para evitar errores.
 
   const roomKeys = Object.keys(roomsObj);
+  const features = t("features", { returnObjects: true });
+  
   // Obtenemos un arreglo con todas las claves de las habitaciones para iterarlas.
 
   if (roomKeys.length === 0) return <p>No hay habitaciones disponibles.</p>;
@@ -66,8 +68,12 @@ const RoomsSection = () => {
 
                 {features.length > 0 && (
                   <ul className="room-features">
+                    {/* {console.log(features)}  */}
                     {features.map((feat, idx) => (
-                      <li key={idx}>✅ {feat}</li>
+                      <li key={idx} className="feature-item">
+                        <img src={feat.icon} alt={feat.text} className="feature-icon" />
+                        <span>{feat.text}</span>
+                      </li>
                     ))}
                   </ul>
                 )}
