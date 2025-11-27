@@ -1,4 +1,4 @@
-/* 🔹 Layout general */
+/* Layout general */
 .room-detail-container {
   max-width: 1100px;
   margin: auto;
@@ -7,7 +7,7 @@
   color: #222;
 }
 
-/* 🔙 Botón atrás */
+/* Botón atrás */
 .back-btn {
   background: none;
   border: none;
@@ -20,13 +20,13 @@
   color: #000;
 }
 
-/* 🏷️ Título */
+/* Título */
 .room-title {
   font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
-/* 🖼️ Galería estilo Airbnb */
+/* Galería estilo Airbnb */
 .room-gallery {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -53,7 +53,7 @@
 
 
 
-/* ℹ️ Info caja */
+/* Info caja */
 .room-info {
   background: #fafafa;
   padding: 1.4rem;
@@ -149,7 +149,7 @@
   background: #000;
 }
 
-/* ❌ Not found */
+/* Not found */
 .not-found {
   text-align: center;
   font-size: 1.2rem;
@@ -157,7 +157,7 @@
   margin-top: 2rem;
 }
 
-/* 🖼️ LIGHTBOX */
+/* LIGHTBOX */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -169,8 +169,9 @@
 }
 
 .lightbox img {
+  bottom: 20px;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80%;
   border-radius: 12px;
 }
 /* ⬅️➡️ Flechas */
@@ -206,7 +207,7 @@
 .lightbox-arrow.right {
   right: 20px;
 }
-/* ❎ Botón cerrar */
+/* Botón cerrar */
 .lightbox-close {
   position: absolute;
   top: 20px;
@@ -238,7 +239,7 @@
   font-weight: 500;
   color: white;
 }
-/* ⭐ Miniaturas del lightbox */
+/*  Miniaturas del lightbox */
 .lightbox-thumbnails {
   position: absolute;
   bottom: 20px;

@@ -1,16 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 // Importamos React y los hooks useState (para manejar estados), useRef (para referencias a elementos del DOM) y useEffect (para ejecutar efectos secundarios).
 
-import DatePicker from 'react-datepicker';
+import DatePicker from "react-datepicker";
 // Importamos el componente DatePicker, que nos permite seleccionar fechas de forma visual.
 
-import 'react-datepicker/dist/react-datepicker.css';
+import "react-datepicker/dist/react-datepicker.css";
 // Importamos los estilos por defecto del calendario de react-datepicker.
 
-import './BookingForm.css';
+import "./BookingForm.css";
 // Importamos los estilos personalizados del formulario de reserva.
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 // Importamos el hook de traducción useTranslation, para usar textos multilenguaje desde los archivos de i18next.
 
 import { es, fr, enGB, de } from "date-fns/locale";
@@ -20,7 +20,6 @@ import { es, fr, enGB, de } from "date-fns/locale";
 // Componente principal BookingForm
 // ---------------------------------------------
 const BookingForm = () => {
-
   const { t, i18n } = useTranslation();
   // Obtenemos la función de traducción "t" y el objeto "i18n" que maneja el idioma actual.
 
@@ -45,7 +44,7 @@ const BookingForm = () => {
   const [rooms, setRooms] = useState(1);
   // Estado que guarda el número de habitaciones seleccionadas.
 
-  const [promoCode, setPromoCode] = useState('');
+  const [promoCode, setPromoCode] = useState("");
   // Estado que guarda el texto del código promocional ingresado.
 
   const formRef = useRef();
@@ -54,7 +53,7 @@ const BookingForm = () => {
   const localesMap = { es, fr, en: enGB, de };
   // Mapa de idiomas: relaciona los códigos ISO de idioma con los objetos de configuración importados.
 
-  const currentLang = i18n.language.split('-')[0];
+  const currentLang = i18n.language.split("-")[0];
   // Extraemos el código de idioma actual (por ejemplo, "es" de "es-ES").
 
   const currentLocale = localesMap[currentLang] || enGB;
@@ -69,9 +68,9 @@ const BookingForm = () => {
         setShowCalendar(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     // Agregamos el evento "mousedown" al documento para detectar clics fuera.
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
     // Limpiamos el evento cuando el componente se desmonta.
   }, []);
   // El array vacío hace que este efecto se ejecute solo una vez (al montar y desmontar).
@@ -94,7 +93,9 @@ const BookingForm = () => {
     // Si la fecha es anterior a ayer, no se puede seleccionar.
     const unavailableDates = [new Date(2025, 7, 21), new Date(2025, 7, 22)];
     // Definimos algunas fechas no disponibles (ejemplo de días bloqueados).
-    return !unavailableDates.some((d) => d.toDateString() === date.toDateString());
+    return !unavailableDates.some(
+      (d) => d.toDateString() === date.toDateString()
+    );
     // Si la fecha coincide con alguna de las bloqueadas, la marcamos como no disponible.
   };
 
@@ -110,7 +111,7 @@ const BookingForm = () => {
 
   return (
     // Estructura visual del componente:
-    <div className="booking-form" id="booking-form" ref={formRef}>
+    <div className="booking-form section" id="booking-form" ref={formRef}>
       {/* Título invisible para lectores de pantalla (accesibilidad) */}
       <h2 className="screen-reader-text">{t("book.titleh2")}</h2>
 
@@ -119,11 +120,15 @@ const BookingForm = () => {
 
         {/* Fecha de entrada */}
         <label>
-          {t('book.checkInLabel')}
+          {t("book.checkInLabel")}
           <input
             type="text"
             readOnly
-            value={startDate ? startDate.toLocaleDateString(currentLang) : t('book.checkIn')}
+            value={
+              startDate
+                ? startDate.toLocaleDateString(currentLang)
+                : t("book.checkIn")
+            }
             // Mostramos la fecha seleccionada o el texto por defecto si no hay fecha.
             onClick={() => setShowCalendar(true)}
             // Al hacer clic, mostramos el calendario.
@@ -132,11 +137,15 @@ const BookingForm = () => {
 
         {/* Fecha de salida */}
         <label>
-          {t('book.checkOutLabel')}
+          {t("book.checkOutLabel")}
           <input
             type="text"
             readOnly
-            value={endDate ? endDate.toLocaleDateString(currentLang) : t('book.checkOut')}
+            value={
+              endDate
+                ? endDate.toLocaleDateString(currentLang)
+                : t("book.checkOut")
+            }
             // Mostramos la fecha de salida o el texto por defecto.
             onClick={() => setShowCalendar(true)}
             // Al hacer clic, también abrimos el calendario.
@@ -145,58 +154,77 @@ const BookingForm = () => {
 
         {/* Número de noches */}
         <label>
-          {t('book.nights')}
-          <input type="text" readOnly value={calculateNights(startDate, endDate)} />
+          {t("book.nights")}
+          <input
+            type="text"
+            readOnly
+            value={calculateNights(startDate, endDate)}
+          />
           {/* Campo que muestra automáticamente cuántas noches hay entre ambas fechas */}
         </label>
 
         {/* Número de habitaciones */}
         <label>
-          {t('book.rooms')}
-          <select value={rooms} onChange={(e) => setRooms(Number(e.target.value))}>
+          {t("book.rooms")}
+          <select
+            value={rooms}
+            onChange={(e) => setRooms(Number(e.target.value))}
+          >
             {/* Generamos 5 opciones de 1 a 5 habitaciones */}
             {[...Array(5)].map((_, i) => (
-              <option key={i+1} value={i+1}>{i+1}</option>
+              <option key={i + 1} value={i + 1}>
+                {i + 1}
+              </option>
             ))}
           </select>
         </label>
 
         {/* Número de adultos */}
         <label>
-          {t('book.adults')}
-          <select value={adults} onChange={(e) => setAdults(Number(e.target.value))}>
+          {t("book.adults")}
+          <select
+            value={adults}
+            onChange={(e) => setAdults(Number(e.target.value))}
+          >
             {/* Generamos 5 opciones de 1 a 5 adultos */}
             {[...Array(5)].map((_, i) => (
-              <option key={i+1} value={i+1}>{i+1}</option>
+              <option key={i + 1} value={i + 1}>
+                {i + 1}
+              </option>
             ))}
           </select>
         </label>
 
         {/* Número de niños */}
         <label>
-          {t('book.children')}
-          <select value={children} onChange={(e) => setChildren(Number(e.target.value))}>
+          {t("book.children")}
+          <select
+            value={children}
+            onChange={(e) => setChildren(Number(e.target.value))}
+          >
             {/* Generamos 5 opciones de 0 a 4 niños */}
             {[...Array(5)].map((_, i) => (
-              <option key={i} value={i}>{i}</option>
+              <option key={i} value={i}>
+                {i}
+              </option>
             ))}
           </select>
         </label>
 
         {/* Código promocional */}
         <label>
-          {t('book.promoCode')}
+          {t("book.promoCode")}
           <input
             type="text"
             value={promoCode}
             onChange={(e) => setPromoCode(e.target.value)}
-            placeholder={t('book.promoCode')}
+            placeholder={t("book.promoCode")}
           />
         </label>
 
         {/* Botón de búsqueda */}
         <button className="booking-search-btn" onClick={handleSearch}>
-          {t('book.search')}
+          {t("book.search")}
         </button>
       </div>
 
@@ -234,7 +262,9 @@ const BookingForm = () => {
               return (
                 <div
                   className="day-with-tooltip"
-                  data-tooltip={nights > 0 ? t('nights', { count: nights }) : ''}
+                  data-tooltip={
+                    nights > 0 ? t("nights", { count: nights }) : ""
+                  }
                 >
                   {day}
                 </div>

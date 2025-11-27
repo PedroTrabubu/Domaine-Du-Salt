@@ -21,8 +21,7 @@ const RoomsSection = () => {
   // Si no existe, usamos un objeto vacío para evitar errores.
 
   const roomKeys = Object.keys(roomsObj);
-  const features = t("features", { returnObjects: true });
-  
+
   // Obtenemos un arreglo con todas las claves de las habitaciones para iterarlas.
 
   if (roomKeys.length === 0) return <p>No hay habitaciones disponibles.</p>;
@@ -58,7 +57,10 @@ const RoomsSection = () => {
 
               <div className="room-content">
                 {/* Contenedor del contenido textual de la tarjeta */}
-                <h3 className="room-name" onClick={() => navigate(`/room/${key}`)}>
+                <h3
+                  className="room-name"
+                  onClick={() => navigate(`/room/${key}`)}
+                >
                   {room.name || key}
                 </h3>
                 {/* Mostramos el nombre de la habitación; al hacer clic navegamos a su detalle */}
@@ -71,7 +73,11 @@ const RoomsSection = () => {
                     {/* {console.log(features)}  */}
                     {features.map((feat, idx) => (
                       <li key={idx} className="feature-item">
-                        <img src={feat.icon} alt={feat.text} className="feature-icon" />
+                        <img
+                          src={feat.icon}
+                          alt={feat.text}
+                          className="feature-icon"
+                        />
                         <span>{feat.text}</span>
                       </li>
                     ))}
@@ -82,7 +88,10 @@ const RoomsSection = () => {
                 {room.price && <p className="room-price">{room.price}</p>}
                 {/* Mostramos el precio de la habitación si está definido */}
 
-                <button className="room-btn" onClick={() => navigate(`/room/${key}`)}>
+                <button
+                  className="room-btn"
+                  onClick={() => navigate(`/room/${key}`)}
+                >
                   {t("rooms.button", "Reservar ahora")}
                 </button>
                 {/* Botón para reservar; al hacer clic navegamos a la página de detalle */}

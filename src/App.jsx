@@ -11,6 +11,8 @@ import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import LocationSection from "./components/LocationSection";
 import Footer from "./components/Footer";
 import RoomDetail from "./components/RoomDetail"; // tu página de detalle
+import ScrollToTop from "./components/ScrollToTop";
+import ContactSection from "./components/ContactSection";
 
 function App() {
   const { i18n } = useTranslation();
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route
@@ -30,8 +33,9 @@ function App() {
               <HeroSlider />
               <Home />
               <RoomsSection />
-              <TestimonialsCarousel />
               <LocationSection />
+              <ContactSection />
+              <TestimonialsCarousel />
               <Footer />
             </>
           }

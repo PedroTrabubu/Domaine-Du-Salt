@@ -371,7 +371,7 @@
   },
 
   "reviews.title": "Lo que nuestros huéspedes opinan",
-  "location.title": "Dónde estamos",
+  "location.title": "Dónde estamos.",
   "location.description": "El Domaine du Sault está situado en plena naturaleza, en el corazón de la Auvernia, con fácil acceso en coche y a pocos kilómetros de Dore-l'Église.",
   "contact.title": "Contacto",
   "footer": {
@@ -401,5 +401,12 @@
   },
   "lightbox": {
     "close": "Cerrar"
+  },
+  "contactForm": {
+    "name": "Nombre: ",
+    "message": "Mensaje: ",
+    "messagePlaceholder": "Vuestro mensaje...",
+    "namePlaceholder": "Jesús Pérez",
+    "send": "Enviar"
   }
 }

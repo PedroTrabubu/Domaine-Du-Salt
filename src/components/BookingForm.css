@@ -61,6 +61,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   transition: all 0.3s ease;
+  color: #000;
 }
 
 .booking-search-btn:hover {

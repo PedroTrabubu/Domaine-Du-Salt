@@ -1,67 +1,41 @@
 .location-section {
-    padding: 4rem 2rem;
-    background: #fff;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  background: #fff;
+  text-align: center;
+  font-family: "Argesta", sans-serif;
 }
 
+/* Título igual al de rooms-section */
 .location-title {
-    font-size: 2rem;
-    font-family: "Argesta", serif;
-    margin-bottom: 1rem;
-    color: #111;
-    letter-spacing: 2px;
-    font-weight: 700;
-    text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1.9rem;
+  margin-bottom: 3rem;
+  color: #111;
+  position: relative;
+}
+
+.location-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #000;
+  margin: 1rem auto 0 auto;
 }
 
 .location-description {
-    font-size: 1.15rem;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-    color: #222;
-    font-family: "Argesta", serif;
-    line-height: 1.7;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1.5rem;
-}
-.contact-info {
-  margin-top: 3rem;             
-  text-align: center;
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #222;
   font-family: "Argesta", serif;
-  color: #333;
-  max-width: 800px;             
-  margin-left: auto;
-  margin-right: auto;
-  scroll-margin-top: 100px; /* Añadido para ajustar el scroll al navegar */
-}
-
-.contact-info h6 {
-  font-size: 1.8rem;            
-  margin-bottom: 1.5rem;        
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #111;
-  border-bottom: 2px solid #eee; 
-  padding-bottom: 0.5rem;
-}
-
-.contact-info p {
-  font-size: 1.15rem;           
-  margin: 0.6rem 0;             
-  line-height: 1.8;
-}
-
-.contact-info a {
-  color: #2c3e50;
-  font-size: 1.15rem;           
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.contact-info a:hover {
-  color: #0077cc;
-  text-decoration: underline;
+  line-height: 1.7;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
 }
 
 

@@ -82,6 +82,7 @@
   font-weight: 700;
   margin-bottom: 0.6rem;
   color: #111;
+  cursor: pointer;
 }
 
 .room-description {

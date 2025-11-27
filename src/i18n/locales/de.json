@@ -398,5 +398,12 @@
   },
   "lightbox": {
     "close": "Schließen"
+  },
+  "contactForm": {
+    "name": "Name:",
+    "message": "Nachricht:",
+    "messagePlaceholder": "Ihre Nachricht...",
+    "namePlaceholder": "Max Mustermann",
+    "send": "Senden"
   }
 }

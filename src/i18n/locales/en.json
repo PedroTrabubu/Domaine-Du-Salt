@@ -389,5 +389,12 @@
   },
   "lightbox": {
     "close": "Close"
+  },
+  "contactForm": {
+    "name": "Name:",
+    "message": "Message:",
+    "messagePlaceholder": "Your message...",
+    "namePlaceholder": "John Smith",
+    "send": "Send"
   }
 }
