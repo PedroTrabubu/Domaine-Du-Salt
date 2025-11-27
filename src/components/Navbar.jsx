@@ -28,6 +28,9 @@ const Navbar = () => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
   // Creamos otro estado para controlar la apertura del submenú de habitaciones.
 
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  //Comprobamos si es la version movil
+
   const rooms = [
     { key: 'gite', name: t('rooms.list.gite.name', 'Gîte Valentin') },
     { key: 'autrefois', name: t('rooms.list.autrefois.name', 'Autrefois') },
@@ -86,16 +89,21 @@ const Navbar = () => {
         </li>
 
         {/* Elemento con submenú (dropdown) */}
-        <li
+        {/* <li
           className="dropdown"
           onMouseEnter={() => setSubmenuOpen(true)}
           onMouseLeave={() => setSubmenuOpen(false)}
+        > */}
+        <li
+          className={`dropdown ${submenuOpen ? 'open' : ''}`}
+          onMouseEnter={() => !isMobile && setSubmenuOpen(true)}
+          onMouseLeave={() => !isMobile && setSubmenuOpen(false)}
         >
           <a href="/#lodging" onClick={() => setMenuOpen(false)}>
             {t('nav.lodging')}
           </a>
 
-          <button
+          {/* <button
             className="dropdown-toggle"
             aria-label="Mostrar habitaciones"
             aria-expanded={submenuOpen}
@@ -109,11 +117,24 @@ const Navbar = () => {
             }}
           >
             <span className="arrow">&#9662;</span>
-          </button>
+          </button> */}
+          
+          <a
+            className="dropdown-toggle"
+            aria-label="Mostrar habitaciones"
+            aria-expanded={submenuOpen}
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              if (isMobile) setSubmenuOpen(!submenuOpen);
+            }}
+          >
+            <span className="arrow"> &#9662;</span>
+          </a>
 
           {/* Mostramos el submenú solo si submenuOpen es verdadero */}
           {submenuOpen && (
-            <ul className="dropdown-menu">
+            <ul className={`dropdown-menu ${submenuOpen ? "open" : ""}`}>
               {rooms.map((room) => (
                 <li key={room.key}>
                   <a
