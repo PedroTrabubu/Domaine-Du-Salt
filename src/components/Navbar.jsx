@@ -102,23 +102,7 @@ const Navbar = () => {
           <a href="/#lodging" onClick={() => setMenuOpen(false)}>
             {t('nav.lodging')}
           </a>
-
-          {/* <button
-            className="dropdown-toggle"
-            aria-label="Mostrar habitaciones"
-            aria-expanded={submenuOpen}
-            type="button"
-            style={{
-              background: 'none',
-              border: 'none',
-              padding: 0,
-              marginLeft: '0.2em',
-              cursor: 'pointer',
-            }}
-          >
-            <span className="arrow">&#9662;</span>
-          </button> */}
-          
+    
           <a
             className="dropdown-toggle"
             aria-label="Mostrar habitaciones"

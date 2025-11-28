@@ -32,7 +32,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 240px 240px;
   gap: 6px;
-  height: 483px;           /* ALTURA MÁXIMA */
+  height: 486px;           /* ALTURA MÁXIMA */
   overflow: hidden;        /* NO CRECE MÁS */
   border-radius: 14px;
 }
@@ -58,7 +58,8 @@
   background: #fafafa;
   padding: 1.4rem;
   border-radius: 14px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   line-height: 1.6;
 }
 
@@ -81,7 +82,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .room-section {
