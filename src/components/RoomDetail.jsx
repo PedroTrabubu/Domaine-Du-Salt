@@ -20,7 +20,7 @@ const RoomDetail = () => {
   const images = room?.images || [];
 
   /* ----------------------------------------------------
-     ⌨️ CONTROL POR TECLADO (← → ESC)
+      CONTROL POR TECLADO (← → ESC)
   ---------------------------------------------------- */
   useEffect(() => {
     if (!room || lightboxIndex === null) return;
@@ -121,7 +121,6 @@ const RoomDetail = () => {
 
       {/* Secciones */}
       <div className="room-sections">
-
         {room.views?.length > 0 && (
           <div className="room-section">
             <h3>{t("roomDetail.views")}</h3>
@@ -164,7 +163,7 @@ const RoomDetail = () => {
           </div>
         )}
       </div>
-        
+
       {/* Información extendida */}
       <div className="room-extra">
         {room.capacity && (

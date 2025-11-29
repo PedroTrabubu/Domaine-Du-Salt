@@ -137,7 +137,7 @@
   margin-right: 8px;
 }
 
-/* 🔘 Botón reserva */
+/* Botón reserva */
 .reserve-btn {
   display: block;
   margin: auto;
@@ -180,7 +180,7 @@
   max-height: 80%;
   border-radius: 12px;
 }
-/* ⬅️➡️ Flechas */
+/*  Flechas */
 .lightbox-arrow {
   position: absolute;
   top: 50%;

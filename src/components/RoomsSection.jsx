@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 import "./RoomsSection.css";
 // Importamos la hoja de estilos específica para esta sección de habitaciones.
+// Importamos el componente ImageSlider para mostrar imágenes en un slider.
+import ImageSlider from "./ImageSlider";
 
 const RoomsSection = () => {
   // Definimos el componente funcional RoomsSection.
@@ -45,13 +47,22 @@ const RoomsSection = () => {
           return (
             <div key={key} className="room-card">
               {/* Tarjeta individual de la habitación */}
-              <img
+              {/* <img
                 src={room.image || "/photos/placeholder.png"}
                 alt={room.name || key}
                 className="room-img"
                 onClick={() => navigate(`/room/${key}`)}
                 onError={(e) => (e.target.src = "/photos/placeholder.png")}
+              /> */}
+              <ImageSlider
+                images={
+                  room.images || [room.image] || ["/photos/placeholder.png"]
+                }
+                interval={6000}
+                onClick={() => navigate(`/room/${key}`)}
+                onError={(e) => (e.target.src = "/photos/placeholder.png")}
               />
+
               {/* Imagen de la habitación; si falla, mostramos un placeholder.
                   Al hacer clic navegamos a la página de detalle. */}
 
