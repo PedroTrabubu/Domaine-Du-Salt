@@ -1,6 +1,6 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import BookingForm from './BookingForm.jsx';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import BookingForm from "./BookingForm.jsx";
 
 const book = () => {
   const { t } = useTranslation();

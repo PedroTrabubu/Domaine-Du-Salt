@@ -1,9 +1,9 @@
 /* ==== FOOTER GENERAL ==== */
 .footer {
-  background: #111;              /* Fondo oscuro elegante */
-  color: #eee;                   /* Texto gris claro para contraste */
-  padding: 3rem 2rem 1rem;       /* Espaciado superior, laterales y menos en la base */
-  font-family: "Argesta", serif; /* Tipografía elegante */
+  background: #1a1a1a;
+  color: #eee;
+  padding: 3rem 2rem 1rem;
+  font-family: "Argesta", serif;
 }
 
 /* ==== CONTENEDOR DEL FOOTER ==== */
@@ -13,7 +13,10 @@
   /* Las columnas se adaptan: mínimo 220px y luego expanden */
   gap: 2rem;                                    /* Espaciado entre columnas */
   margin-bottom: 2rem;                          /* Espacio inferior antes del borde */
+  
 }
+
+/* Footer sin margenes */
 
 /* ==== TITULOS DE LAS COLUMNAS ==== */
 .footer-column h6 {

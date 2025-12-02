@@ -8,10 +8,26 @@ import "./TestimonialsCarousel.css";
 // Importamos la hoja de estilos específica para este carrusel de testimonios.
 
 const ratings = [
-  { site: "Booking.com", score: "⭐ 9.7/10", link: "https://www.booking.com/hotel/fr/domaine-de-sault.es.html?..." },
-  { site: "LastMinute", score: "⭐ 9.8/10", link: "https://www.fr.lastminute.com/hotel/france/dore-l-eglise/domaine-de-sault_hid-10504416" },
-  { site: "TripAdvisor", score: "⭐ 4.7/5", link: "https://www.tripadvisor.fr/Hotel_Review-g2545280-d5049482-Reviews-Domaine_De_Sault-Dore_l_Eglise_Puy_de_Dome_Auvergne_Rhone_Alpes.html?m=19905" },
-  { site: "Google", score: "⭐ 4.5/5", link: "https://www.google.com/travel/search?q=Domaine%20de%20Sault&hl=es-FR&gl=fr&..." },
+  {
+    site: "Booking.com",
+    score: "⭐ 9.7/10",
+    link: "https://www.booking.com/hotel/fr/domaine-de-sault.es.html?...",
+  },
+  {
+    site: "LastMinute",
+    score: "⭐ 9.8/10",
+    link: "https://www.fr.lastminute.com/hotel/france/dore-l-eglise/domaine-de-sault_hid-10504416",
+  },
+  {
+    site: "TripAdvisor",
+    score: "⭐ 4.7/5",
+    link: "https://www.tripadvisor.fr/Hotel_Review-g2545280-d5049482-Reviews-Domaine_De_Sault-Dore_l_Eglise_Puy_de_Dome_Auvergne_Rhone_Alpes.html?m=19905",
+  },
+  {
+    site: "Google",
+    score: "⭐ 4.5/5",
+    link: "https://www.google.com/travel/search?q=Domaine%20de%20Sault&hl=es-FR&gl=fr&...",
+  },
 ];
 // Creamos un arreglo con las puntuaciones de distintas plataformas, incluyendo el sitio, la puntuación y el enlace.
 
@@ -26,7 +42,7 @@ const testimonials = [
   },
   {
     text: "Eine wunderschöne Oase mitten in der Auvergne. Tolle individuelle Zimmer mit großem Komfort. Sehr schöner Swimmingpool und toller Außenbereich mit Open Air Gästeküche. Das Frühstück ist großartig. Sylvie und Philippe sind die besten Gastgeber, die man sich wünschen kann. Super großzügig und hilfsbereit als wir eine Autopanne hatten. Dickes Dankeschön für alles! Wir kommen gerne wieder.",
-    author:"Shirin, Deutschland",
+    author: "Shirin, Deutschland",
   },
   {
     text: "Sylvie et Philippe feront de votre séjour un véritable moment de détente. Entre la piscine, le confort des lieux, les prestations proposées et celles suggérées, nous avons vécu trois jours exceptionnels.",
@@ -49,7 +65,7 @@ const testimonials = [
     author: "Avis LastMinute, France",
   },
   {
-    text:"La belleza del lugar, el trato. El desayuno un 10",
+    text: "La belleza del lugar, el trato. El desayuno un 10",
     author: "Carlota, España",
   },
 ];
@@ -77,7 +93,10 @@ const TestimonialsCarousel = () => {
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
   // Función para pasar al siguiente testimonio de forma circular.
 
-  const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prev = () =>
+    setCurrent(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   // Función para retroceder al testimonio anterior de forma circular.
 
   return (
@@ -108,16 +127,22 @@ const TestimonialsCarousel = () => {
       {/* Carrusel */}
       <div className="testimonials-carousel">
         <div className="carousel-container">
-          <button className="nav-btn left" onClick={prev}>❮</button>
+          <button className="nav-btn left" onClick={prev}>
+            ❮
+          </button>
           {/* Botón para ir al testimonio anterior */}
 
           <div className="testimonial-card">
             <p className="testimonial-text">“{testimonials[current].text}”</p>
-            <span className="testimonial-author">— {testimonials[current].author}</span>
+            <span className="testimonial-author">
+              — {testimonials[current].author}
+            </span>
           </div>
           {/* Mostramos el testimonio actual con su autor */}
 
-          <button className="nav-btn right" onClick={next}>❯</button>
+          <button className="nav-btn right" onClick={next}>
+            ❯
+          </button>
           {/* Botón para ir al siguiente testimonio */}
         </div>
 
