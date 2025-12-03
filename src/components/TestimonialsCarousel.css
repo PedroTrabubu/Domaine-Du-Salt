@@ -45,6 +45,18 @@
   text-decoration: none;
   color: inherit;
 }
+.rating-icon {
+  width: 64px;
+  height: 64px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.rating-card:hover .rating-icon {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
 
 .rating-card strong {
   font-size: 1.2rem;
