@@ -113,7 +113,7 @@ const BookingForm = () => {
     // Estructura visual del componente:
     <div className="booking-form section" id="booking-form" ref={formRef}>
       {/* Título invisible para lectores de pantalla (accesibilidad) */}
-      <h2 className="screen-reader-text">{t("book.titleh2")}</h2>
+      {/* <h2 className="screen-reader-text">{t("book.titleh2")}</h2> */}
 
       <div className="booking-controls">
         {/* Campos de entrada principales del formulario */}
@@ -153,15 +153,16 @@ const BookingForm = () => {
         </label>
 
         {/* Número de noches */}
-        <label>
+        {/* <label>
           {t("book.nights")}
           <input
             type="text"
             readOnly
             value={calculateNights(startDate, endDate)}
           />
+        </label> */}
           {/* Campo que muestra automáticamente cuántas noches hay entre ambas fechas */}
-        </label>
+
 
         {/* Número de habitaciones */}
         <label>
@@ -212,7 +213,7 @@ const BookingForm = () => {
         </label>
 
         {/* Código promocional */}
-        <label>
+        {/* <label>
           {t("book.promoCode")}
           <input
             type="text"
@@ -220,7 +221,7 @@ const BookingForm = () => {
             onChange={(e) => setPromoCode(e.target.value)}
             placeholder={t("book.promoCode")}
           />
-        </label>
+        </label> */}
 
         {/* Botón de búsqueda */}
         <button className="booking-search-btn" onClick={handleSearch}>
