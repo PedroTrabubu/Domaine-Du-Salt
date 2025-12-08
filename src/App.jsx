@@ -5,14 +5,14 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
-import Home from "./components/Book";
 import RoomsSection from "./components/RoomsSection";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import LocationSection from "./components/LocationSection";
 import Footer from "./components/Footer";
-import RoomDetail from "./components/RoomDetail"; // tu página de detalle
+import RoomDetail from "./components/RoomDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactSection from "./components/ContactSection";
+import BookingForm from "./components/BookingForm";
 
 function App() {
   const { i18n } = useTranslation();
@@ -31,7 +31,7 @@ function App() {
           element={
             <>
               <HeroSlider />
-              <Home />
+              <BookingForm />
               <RoomsSection />
               <LocationSection />
               <ContactSection />

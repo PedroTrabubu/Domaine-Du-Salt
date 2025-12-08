@@ -44,7 +44,7 @@ const BookingForm = () => {
   const [rooms, setRooms] = useState(1);
   // Estado que guarda el número de habitaciones seleccionadas.
 
-  const [promoCode, setPromoCode] = useState("");
+  // const [promoCode, setPromoCode] = useState("");
   // Estado que guarda el texto del código promocional ingresado.
 
   const formRef = useRef();
@@ -78,7 +78,7 @@ const BookingForm = () => {
   const handleSearch = () => {
     // Función que se ejecuta al pulsar el botón de búsqueda.
     alert(
-      `Buscando: ${startDate?.toLocaleDateString()} - ${endDate?.toLocaleDateString()}, ${rooms} habitaciones, ${adults} adultos, ${children} niños, código: ${promoCode}`
+      `Buscando: ${startDate?.toLocaleDateString()} - ${endDate?.toLocaleDateString()}, ${rooms} habitaciones, ${adults} adultos, ${children} niños}`
     );
     // Mostramos un mensaje con la información seleccionada (a modo de prueba).
   };
@@ -161,8 +161,7 @@ const BookingForm = () => {
             value={calculateNights(startDate, endDate)}
           />
         </label> */}
-          {/* Campo que muestra automáticamente cuántas noches hay entre ambas fechas */}
-
+        {/* Campo que muestra automáticamente cuántas noches hay entre ambas fechas */}
 
         {/* Número de habitaciones */}
         <label>
