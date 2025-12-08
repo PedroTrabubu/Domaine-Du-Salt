@@ -46,7 +46,7 @@
 }
 
 .footer-column a:hover {
-  color: #fff;                   /* Resalta al pasar el ratón */
+  color: #fff; 
 }
 
 /* ==== LOGOS DE PARTNERS ==== */
@@ -57,11 +57,11 @@
 }
 
 .partners-logos img {
-  max-width: 100%;    /* No exceden el ancho de su celda */
-  max-height: 60px;   /* Altura uniforme para evitar que unos sean gigantes */
-  object-fit: contain;/* Mantiene proporción del logo */
-  margin: 0 auto;     /* Centrado horizontal */
-  filter: grayscale(100%);    /* Se ven en escala de grises */
+  max-width: 100%;    
+  max-height: 60px;   
+  object-fit: contain;
+  margin: 0 auto;     
+  filter: grayscale(100%);  
   transition: filter 0.3s ease;
 }
 
@@ -75,23 +75,23 @@
   padding-top: 1rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #aaa;               /* Texto más apagado */
+  color: #aaa;      /* Color del texto */
 }
 /* ==== ICONOS DE REDES SOCIALES ==== */
 .social-icons {
   display: flex;
-  gap: 1rem;               /* Espacio entre iconos */
+  gap: 1rem;        /* Espacio entre los iconos */
   margin-top: 0.5rem;
 }
 
 .social-icons img {
-  width: 64px;             /* Más grandes */
+  width: 64px;     
   height: 64px;
-  filter: grayscale(100%); /* Grises por defecto */
+  filter: grayscale(100%); 
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons img:hover {
-  filter: grayscale(0%);   /* A color al hover */
-  transform: scale(1.1);   /* Un poco más grandes al pasar el ratón */
+  filter: grayscale(0%);   
+  transform: scale(1.1);   
 }
