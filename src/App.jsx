@@ -1,7 +1,7 @@
 // ..\Domaine-Du-Salt> npm run dev
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
@@ -17,6 +17,16 @@ import Accommodation from "./components/Accommodation";
 
 function App() {
   const { i18n } = useTranslation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = i18n.language;
@@ -32,7 +42,7 @@ function App() {
           element={
             <>
               <HeroSlider />
-              <BookingForm />
+              {isMobile && <BookingForm />}
               <RoomsSection />
               <Accommodation />
               <LocationSection />
