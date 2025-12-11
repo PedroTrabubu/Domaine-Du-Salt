@@ -5,9 +5,16 @@
   "nav": {
     "book": "Reservar",
     "lodging": "Habitaciones",
+    "accommodation": "Alojamiento",
     "review": "Opiniones",
     "location": "Ubicación",
     "contact": "Contacto"
+  },
+  "accommodation": {
+    "commonAreas": "Zonas comunes",
+    "services": "Servicios",
+    "whatToDo": "Qué hacer",
+    "reviews": "Opiniones"
   },
   "languages": {
     "fr": "Français",

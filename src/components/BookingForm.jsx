@@ -111,7 +111,7 @@ const BookingForm = () => {
 
   return (
     // Estructura visual del componente:
-    <div className="booking-form section" id="booking-form" ref={formRef}>
+    <section className="booking-form section" id="book" ref={formRef}>
       {/* Título invisible para lectores de pantalla (accesibilidad) */}
       {/* <h2 className="screen-reader-text">{t("book.titleh2")}</h2> */}
 
@@ -273,7 +273,7 @@ const BookingForm = () => {
           />
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
