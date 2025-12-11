@@ -13,6 +13,7 @@ import RoomDetail from "./components/RoomDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactSection from "./components/ContactSection";
 import BookingForm from "./components/BookingForm";
+import Accommodation from "./components/Accommodation";
 
 function App() {
   const { i18n } = useTranslation();
@@ -33,6 +34,7 @@ function App() {
               <HeroSlider />
               <BookingForm />
               <RoomsSection />
+              <Accommodation />
               <LocationSection />
               <ContactSection />
               <TestimonialsCarousel />

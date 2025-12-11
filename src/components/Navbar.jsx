@@ -144,7 +144,7 @@ const Navbar = () => {
           onMouseEnter={() => !isMobile && setSubmenuOpen("alojamiento")}
           onMouseLeave={() => !isMobile && setSubmenuOpen(null)}
         >
-          <a href="/#lodging" onClick={() => setMenuOpen(false)}>
+          <a href="/#accommodation" onClick={() => setMenuOpen(false)}>
             {t("nav.accommodation")}
           </a>
 
@@ -184,7 +184,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="/#opiniones" onClick={() => setMenuOpen(false)}>
+                <a href="/#reviews" onClick={() => setMenuOpen(false)}>
                   {t("accommodation.reviews")}
                 </a>
               </li>
