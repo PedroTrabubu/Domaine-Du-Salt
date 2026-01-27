@@ -10,12 +10,12 @@ import "./TestimonialsCarousel.css";
 const ratings = [
   {
     site: "Booking.com",
-    score: "⭐ 9.7/10",
+    score: "⭐ 9.6/10",
     link: "https://www.booking.com/hotel/fr/domaine-de-sault.es.html?...",
   },
   {
     site: "LastMinute",
-    score: "⭐ 9.8/10",
+    score: "⭐ 9.6/10",
     link: "https://www.fr.lastminute.com/hotel/france/dore-l-eglise/domaine-de-sault_hid-10504416",
   },
   {
@@ -25,7 +25,7 @@ const ratings = [
   },
   {
     site: "Google",
-    score: "⭐ 4.5/5",
+    score: "⭐ 4.6/5",
     link: "https://www.google.com/travel/search?q=Domaine%20de%20Sault&hl=es-FR&gl=fr&...",
   },
 ];
@@ -95,7 +95,7 @@ const TestimonialsCarousel = () => {
 
   const prev = () =>
     setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   // Función para retroceder al testimonio anterior de forma circular.
 

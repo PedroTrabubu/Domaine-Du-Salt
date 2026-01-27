@@ -1,7 +1,7 @@
 // ..\Domaine-Du-Salt> npm run dev
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ContactSection from "./components/ContactSection";
 import BookingForm from "./components/BookingForm";
 import Accommodation from "./components/Accommodation";
+import AccommodationDetails from "./components/AccomodationDetails";
 
 function App() {
   const { i18n } = useTranslation();
@@ -53,6 +54,10 @@ function App() {
           }
         />
         <Route path="/room/:roomId" element={<RoomDetail />} />
+        <Route
+          path="/accommodation/:section"
+          element={<AccommodationDetails />}
+        />
       </Routes>
     </Router>
   );

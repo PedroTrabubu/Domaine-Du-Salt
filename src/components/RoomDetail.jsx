@@ -266,7 +266,7 @@ const RoomDetail = () => {
             onClick={(e) => {
               e.stopPropagation();
               setLightboxIndex(
-                (lightboxIndex - 1 + images.length) % images.length
+                (lightboxIndex - 1 + images.length) % images.length,
               );
             }}
           >

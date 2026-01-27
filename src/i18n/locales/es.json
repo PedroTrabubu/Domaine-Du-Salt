@@ -10,11 +10,39 @@
     "location": "Ubicación",
     "contact": "Contacto"
   },
+
   "accommodation": {
-    "commonAreas": "Zonas comunes",
-    "services": "Servicios",
-    "whatToDo": "Qué hacer",
-    "reviews": "Opiniones"
+    "menu": {
+      "commonAreas": "Zonas comunes",
+      "services": "Servicios",
+      "whatToDo": "Qué hacer",
+      "reviews": "Opiniones"
+    },
+
+    "sections": [
+      {
+        "slug": "common-areas",
+        "title": "Zonas comunes",
+        "description": "Nuestros espacios compartidos han sido diseñados para ofrecer confort, tranquilidad y momentos de conexión con la naturaleza. Relájese leyendo un libro en los acogedores rincones del dominio, disfrute de un café en la cocina de verano, o contemple los jardines desde el balcón de la Maison des Oiseaux. Cada rincón invita a la serenidad y a disfrutar de la belleza de Auvernia en completa armonía.",
+        "images": ["/photos/Common Areas/esperaHorizontal_2.avif"]
+      },
+      {
+        "slug": "services",
+        "title": "Servicios",
+        "description": "Pensados para que su estancia sea cómoda y memorable, ofrecemos servicios de alta calidad: conexión wifi, desayuno gourmet, limpieza diaria y atención personalizada. Nuestro espacio de bienestar incluye sauna, zona de lectura, juegos y una sala de masajes impartidos por profesionales, enfocados en el bienestar y la relajación. Los tratamientos contribuyen a aliviar tensiones, relajar la musculatura, mejorar la oxigenación celular y favorecer un sueño reparador, incluyendo masajes faciales, de espalda, piernas y pies.",
+        "images": [
+          "/photos/Breakfast/desayunoC.png",
+          "/photos/Wellness/sauna.webp",
+          "/photos/Wellness/massage.webp"
+        ]
+      },
+      {
+        "slug": "what-to-do",
+        "title": "Qué hacer",
+        "description": "Descubra la riqueza de la región de Auvernia con experiencias pensadas para todos los gustos. Practique senderismo por bosques y paisajes verdes, recorra rutas en bicicleta, explore la riqueza cultural local o participe en actividades deportivas. Excursiones cercanas, como La Chaise-Dieu y las iglesias románicas, le permitirán sumergirse en la historia y la belleza arquitectónica de la región.",
+        "images": ["/photos/Activities/LePuy.webp"]
+      }
+    ]
   },
   "languages": {
     "fr": "Français",

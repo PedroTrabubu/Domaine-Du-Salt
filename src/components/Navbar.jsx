@@ -158,7 +158,7 @@ const Navbar = () => {
               e.preventDefault();
               if (isMobile)
                 setSubmenuOpen(
-                  submenuOpen === "alojamiento" ? null : "alojamiento"
+                  submenuOpen === "alojamiento" ? null : "alojamiento",
                 );
             }}
           >
@@ -169,23 +169,29 @@ const Navbar = () => {
           {submenuOpen === "alojamiento" && (
             <ul className="dropdown-menu open">
               <li>
-                <a href="/#zonas" onClick={() => setMenuOpen(false)}>
-                  {t("accommodation.commonAreas")}
+                <a
+                  href="/accommodation/common-areas"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("accommodation.menu.commonAreas")}
                 </a>
               </li>
               <li>
-                <a href="/#servicios" onClick={() => setMenuOpen(false)}>
-                  {t("accommodation.services")}
+                <a
+                  href="/accommodation/services"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("accommodation.menu.services")}
                 </a>
               </li>
               <li>
-                <a href="/#quehacer" onClick={() => setMenuOpen(false)}>
-                  {t("accommodation.whatToDo")}
+                <a href="/what-to-do" onClick={() => setMenuOpen(false)}>
+                  {t("accommodation.menu.whatToDo")}
                 </a>
               </li>
               <li>
                 <a href="/#reviews" onClick={() => setMenuOpen(false)}>
-                  {t("accommodation.reviews")}
+                  {t("accommodation.menu.reviews")}
                 </a>
               </li>
             </ul>

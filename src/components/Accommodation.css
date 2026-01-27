@@ -43,6 +43,11 @@
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
 
+/* Alternar la segunda tarjeta */
+.accommodation-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .accommodation-text {
   flex: 1;
   padding: 2rem;
@@ -56,6 +61,7 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: #111;
+  cursor: pointer; 
 }
 
 .accommodation-description {
