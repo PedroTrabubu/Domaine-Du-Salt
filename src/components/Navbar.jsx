@@ -185,7 +185,10 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="/what-to-do" onClick={() => setMenuOpen(false)}>
+                <a
+                  href="/accommodation/what-to-do"
+                  onClick={() => setMenuOpen(false)}
+                >
                   {t("accommodation.menu.whatToDo")}
                 </a>
               </li>

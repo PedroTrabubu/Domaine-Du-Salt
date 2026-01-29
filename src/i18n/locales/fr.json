@@ -5,9 +5,40 @@
   "nav": {
     "book": "Réserver",
     "lodging": "Chambres",
+    "accommodation": "Hébergement",
     "review": "Avis",
     "location": "Localisation",
     "contact": "Contact"
+  },
+
+  "accommodation": {
+    "menu": {
+      "commonAreas": "Espaces communs",
+      "services": "Services",
+      "whatToDo": "À faire",
+      "reviews": "Avis"
+    },
+
+    "sections": [
+      {
+        "slug": "common-areas",
+        "title": "Espaces communs",
+        "description": "Nos espaces partagés ont été conçus pour offrir confort, tranquillité et moments de connexion avec la nature. Détendez-vous avec un livre dans les coins chaleureux du domaine, savourez un café dans la cuisine d'été ou admirez les jardins depuis le balcon de la Maison des Oiseaux. Chaque recoin invite à la sérénité et à profiter de la beauté de l’Auvergne en parfaite harmonie.",
+        "images": ["/photos/Common Areas/esperaHorizontal_2.avif"]
+      },
+      {
+        "slug": "services",
+        "title": "Services",
+        "description": "Pensés pour rendre votre séjour confortable et mémorable, nous proposons des services de qualité : Wi-Fi, petit-déjeuner gourmand, ménage quotidien et attention personnalisée. Notre espace bien-être comprend sauna, coin lecture et jeux, ainsi qu'une salle de massages encadrée par des professionnels. Les soins contribuent à soulager les tensions, détendre les muscles, améliorer la circulation et favoriser un sommeil réparateur, incluant massages du visage, du dos, des jambes et des pieds.",
+        "images": ["/photos/Breakfast/desayunoC.png"]
+      },
+      {
+        "slug": "what-to-do",
+        "title": "À faire",
+        "description": "Découvrez la richesse de la région Auvergne avec des expériences pour tous les goûts. Faites de la randonnée à travers les forêts et paysages verdoyants, explorez la culture locale, profitez de balades à vélo ou participez à des activités sportives. Les excursions à proximité, comme La Chaise-Dieu et les églises romanes, vous plongeront dans l’histoire et la beauté architecturale de la région.",
+        "images": ["/photos/Activities/LePuy.webp"]
+      }
+    ]
   },
   "languages": {
     "fr": "Français",

@@ -5,9 +5,40 @@
   "nav": {
     "book": "Buchen",
     "lodging": "Zimmer",
+    "accommodation": "Unterkunft",
     "review": "Bewertungen",
-    "location": "Standort",
+    "location": "Lage",
     "contact": "Kontakt"
+  },
+
+  "accommodation": {
+    "menu": {
+      "commonAreas": "Gemeinschaftsbereiche",
+      "services": "Serviceleistungen",
+      "whatToDo": "Aktivitäten",
+      "reviews": "Bewertungen"
+    },
+
+    "sections": [
+      {
+        "slug": "common-areas",
+        "title": "Gemeinschaftsbereiche",
+        "description": "Unsere Gemeinschaftsbereiche wurden gestaltet, um Komfort, Ruhe und Momente der Naturverbundenheit zu bieten. Entspannen Sie sich mit einem Buch in den gemütlichen Ecken des Anwesens, genießen Sie einen Kaffee in der Sommerküche oder bewundern Sie die Gärten vom Balkon des Maison des Oiseaux. Jede Ecke lädt zur Ruhe ein und lässt Sie die Schönheit der Auvergne in vollkommener Harmonie genießen.",
+        "images": ["/photos/Common Areas/esperaHorizontal_2.avif"]
+      },
+      {
+        "slug": "services",
+        "title": "Serviceleistungen",
+        "description": "Damit Ihr Aufenthalt komfortabel und unvergesslich wird, bieten wir hochwertige Services: WLAN, Gourmet-Frühstück, tägliche Reinigung und persönliche Betreuung. Unser Wellnessbereich umfasst eine Sauna, Lese- und Spielbereiche sowie einen Massageraum mit professionellen Therapeuten. Die Behandlungen helfen, Spannungen zu lösen, die Muskulatur zu entspannen, die Durchblutung zu fördern und einen erholsamen Schlaf zu unterstützen, einschließlich Gesichts-, Rücken-, Bein- und Fußmassagen.",
+        "images": ["/photos/Breakfast/desayunoC.png"]
+      },
+      {
+        "slug": "what-to-do",
+        "title": "Aktivitäten",
+        "description": "Entdecken Sie die Vielfalt der Region Auvergne mit Angeboten für jeden Geschmack. Unternehmen Sie Wanderungen durch Wälder und grüne Landschaften, erkunden Sie die lokale Kultur, unternehmen Sie Radtouren oder nehmen Sie an sportlichen Aktivitäten teil. Nahegelegene Ausflugsziele, wie La Chaise-Dieu und die romanischen Kirchen, lassen Sie in die Geschichte und architektonische Schönheit der Region eintauchen.",
+        "images": ["/photos/Activities/LePuy.webp"]
+      }
+    ]
   },
   "languages": {
     "fr": "Français",

@@ -5,9 +5,40 @@
   "nav": {
     "book": "Book",
     "lodging": "Rooms",
+    "accommodation": "Accommodation",
     "review": "Reviews",
     "location": "Location",
     "contact": "Contact"
+  },
+
+  "accommodation": {
+    "menu": {
+      "commonAreas": "Common Areas",
+      "services": "Services",
+      "whatToDo": "What to Do",
+      "reviews": "Reviews"
+    },
+
+    "sections": [
+      {
+        "slug": "common-areas",
+        "title": "Common Areas",
+        "description": "Our shared spaces are designed to offer comfort, tranquility, and moments to connect with nature. Relax with a book in the cozy corners of the estate, enjoy a coffee in the summer kitchen, or admire the gardens from the balcony of the Maison des Oiseaux. Every corner invites serenity and lets you enjoy the beauty of Auvergne in perfect harmony.",
+        "images": ["/photos/Common Areas/esperaHorizontal_2.avif"]
+      },
+      {
+        "slug": "services",
+        "title": "Services",
+        "description": "Designed to make your stay comfortable and memorable, we offer high-quality services: Wi-Fi, gourmet breakfast, daily housekeeping, and personalized attention. Our wellness area includes a sauna, reading and game spaces, and a massage room led by professional therapists. Treatments help relieve tension, relax muscles, improve circulation, and promote restful sleep, including facial, back, leg, and foot massages.",
+        "images": ["/photos/Breakfast/desayunoC.png"]
+      },
+      {
+        "slug": "what-to-do",
+        "title": "What to Do",
+        "description": "Discover the richness of the Auvergne region with experiences for every taste. Enjoy hiking through forests and green landscapes, explore local culture, take cycling tours, or participate in sports activities. Nearby excursions, such as La Chaise-Dieu and the Romanesque churches, immerse you in the history and architectural beauty of the region.",
+        "images": ["/photos/Activities/LePuy.webp"]
+      }
+    ]
   },
   "languages": {
     "fr": "Français",

@@ -99,19 +99,79 @@
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
+  cursor: pointer;
 }
 
 .accommodation-card:hover .accommodation-img {
   transform: scale(1.05);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
-  .accommodation-card {
+  .accommodation-section {
+    padding: 0.5rem;
+  }
+
+  .accommodation-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .accommodation-container {
+    gap: 2rem;
+  }
+
+  .accommodation-card,
+  .accommodation-card:nth-child(even) {
     flex-direction: column;
+    border-radius: 14px;
   }
 
   .accommodation-img-wrapper {
-    min-height: 250px;
+    min-height: 220px;
+  }
+
+  .accommodation-text {
+    padding: 1.5rem;
+  }
+
+  .accommodation-name {
+    font-size: 1.4rem;
+  }
+
+  .accommodation-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .accommodation-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+}
+
+/* =========================
+   MOBILE PEQUEÑO (extra aire)
+   ========================= */
+
+@media (max-width: 600px) {
+  .accommodation-img-wrapper {
+    min-height: 260px;
+  }
+}
+
+/* =========================
+   DESACTIVAR HOVERS EN TÁCTIL
+   ========================= */
+
+@media (hover: none) {
+  .accommodation-card:hover {
+    transform: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .accommodation-card:hover .accommodation-img {
+    transform: none;
   }
 }

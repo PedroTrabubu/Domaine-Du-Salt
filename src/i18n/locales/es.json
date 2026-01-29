@@ -30,11 +30,7 @@
         "slug": "services",
         "title": "Servicios",
         "description": "Pensados para que su estancia sea cómoda y memorable, ofrecemos servicios de alta calidad: conexión wifi, desayuno gourmet, limpieza diaria y atención personalizada. Nuestro espacio de bienestar incluye sauna, zona de lectura, juegos y una sala de masajes impartidos por profesionales, enfocados en el bienestar y la relajación. Los tratamientos contribuyen a aliviar tensiones, relajar la musculatura, mejorar la oxigenación celular y favorecer un sueño reparador, incluyendo masajes faciales, de espalda, piernas y pies.",
-        "images": [
-          "/photos/Breakfast/desayunoC.png",
-          "/photos/Wellness/sauna.webp",
-          "/photos/Wellness/massage.webp"
-        ]
+        "images": ["/photos/Breakfast/desayunoC.png"]
       },
       {
         "slug": "what-to-do",
