@@ -14,14 +14,12 @@ const RoomDetail = () => {
 
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  // ➜ refs para swipe móvil
+  // refs para swipe móvil
   const touchStartX = useRef(null);
 
   const images = room?.images || [];
 
-  /* ----------------------------------------------------
-      CONTROL POR TECLADO (← → ESC)
-  ---------------------------------------------------- */
+  //CONTROL POR TECLADO (← → ESC)
   useEffect(() => {
     if (!room || lightboxIndex === null) return;
 
@@ -41,9 +39,7 @@ const RoomDetail = () => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [lightboxIndex, images.length, room]);
 
-  /* ----------------------------------------------------
-     📱 SWIPE MÓVIL
-  ---------------------------------------------------- */
+  // SWIPE MÓVIL
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -62,7 +58,7 @@ const RoomDetail = () => {
     touchStartX.current = null;
   };
 
-  // 🔹 Render condicional fuera de Hooks
+  // Render condicional fuera de Hooks
   if (!room) return <p className="not-found">{t("roomDetail.notFound")}</p>;
 
   return (
@@ -316,9 +312,7 @@ const RoomDetail = () => {
 
 export default RoomDetail;
 
-/* ----------------------------------------
- SVG ICONS
----------------------------------------- */
+// SVG ICONS
 const SvgSize = () => (
   <svg viewBox="0 0 24 24">
     <path d="M3 3h18v2H3zm0 16h18v2H3zM3 7h2v10H3zm16 0h2v10h-2z" />

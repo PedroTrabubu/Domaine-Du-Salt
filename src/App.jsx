@@ -54,10 +54,7 @@ function App() {
           }
         />
         <Route path="/room/:roomId" element={<RoomDetail />} />
-        <Route
-          path="/accommodation/:section"
-          element={<AccommodationDetails />}
-        />
+        <Route path="/accommodation/:section" element={<AccommodationDetails />} />
       </Routes>
     </Router>
   );

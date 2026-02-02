@@ -4,8 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 // Importamos los estilos CSS del slider
 import "./HeroSlider.css";
-
-/* EDU */
 import BookingForm from "./BookingForm";
 
 // Array de imágenes que se mostrarán en el carrusel
@@ -47,32 +45,6 @@ const HeroSlider = () => {
         alt={`Slide ${currentIndex + 1}`} // Texto alternativo dinámico
         className="hero-image" // Clase CSS para estilos
       />
-
-      {/* <div className="slide-container">
-        <img
-          className="slide fade-in"
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt={`Slide ${currentIndex + 1}`}
-        />
-
-        <img
-          className="slide fade-out"
-          key={currentIndex}
-          src={images[prevIndex]}
-          alt={`Slide ${prevIndex + 1}`}
-        />
-      </div> */}
-
-      {/* *** */}
-
-      {/*       <img
-        src={images[currentIndex]}
-        alt={`Slide ${currentIndex + 1}`}
-        className="hero-image"
-      /> */}
-
-      {/* EDU */}
 
       <div className="hero-booking-form">
         <BookingForm />

@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="footer-container">
         {" "}
         {/* Contenedor de columnas del footer */}
-        {/* === Columna de navegación === */}
+        {/*Columna de navegación*/}
         <div className="footer-column">
           <h6>{t("footer.navigation")}</h6> {/* Título traducido */}
           <ul>
@@ -40,7 +40,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* === Columna de contacto rápido === */}
+        {/*Columna de contacto rápido*/}
         <div className="footer-column">
           <h6>{t("footer.contact")}</h6>
 
@@ -74,7 +74,7 @@ const Footer = () => {
             lesault@wanadoo.fr
           </p>
         </div>
-        {/* === Columna de socios / partners === */}
+        {/*Columna de socios / partners */}
         <div className="footer-column">
           <h6>{t("footer.partners")}</h6> {/* Título traducido */}
           <div className="partners-logos">
@@ -148,7 +148,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        {/* === Columna de redes sociales y enlaces adicionales === */}
+        {/*Columna de redes sociales y enlaces adicionales*/}
         <div className="footer-column">
           <h6>{t("footer.more")}</h6> {/* Título traducido */}
           <div className="social-icons">
