@@ -8,29 +8,51 @@ const AccommodationDetails = () => {
   const { t } = useTranslation();
 
   const sections = t("accommodation.sections", { returnObjects: true }) || [];
-
   const currentSection = sections.find((item) => item.slug === section);
 
   if (!currentSection) {
     return (
       <section className="accommodation-detail">
         <p>Sección no encontrada</p>
-        <button onClick={() => navigate("/")}>Volver</button>
+        <button onClick={() => navigate("/")}>Volver al inicio</button>
       </section>
     );
   }
 
   return (
     <section className="accommodation-detail">
-      <button onClick={() => navigate(-1)}>← Volver</button>
+      {/* HERO */}
+      <div className="accommodation-detail-hero">
+        <img
+          src={currentSection.images?.[0]}
+          alt={currentSection.title}
+        />
+        <div className="accommodation-detail-hero-text">
+          <h1>{currentSection.title}</h1>
+        </div>
+      </div>
 
-      <h1>{currentSection.title}</h1>
-      <p>{currentSection.description}</p>
+      {/* CONTENT */}
+      <div className="accommodation-detail-content">
+        <p className="accommodation-detail-description">
+          {currentSection.description}
+        </p>
+      </div>
 
-      <div className="accommodation-detail-gallery">
-        {currentSection.images.map((img, idx) => (
-          <img key={idx} src={img} alt="" />
-        ))}
+      {/* GALLERY */}
+      {currentSection.images?.length > 1 && (
+        <div className="accommodation-detail-gallery">
+          {currentSection.images.slice(1).map((img, idx) => (
+            <img key={idx} src={img} alt={'${currentSection.title} ${idx + 1}'} />
+          ))}
+        </div>
+      )}
+
+      {/* NAV */}
+      <div className="accommodation-detail-nav">
+        <button onClick={() => navigate("/#accommodation")}>
+          ← Volver a Alojamiento
+        </button>
       </div>
     </section>
   );
